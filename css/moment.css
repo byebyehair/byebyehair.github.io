@@ -1,0 +1,170 @@
+[v-cloak] {
+    display:none !important;
+}
+
+img {
+    border-radius:3px
+}
+a {
+   
+}
+a img {
+    display:block;
+    vertical-align:bottom;
+}
+a video {
+    display:block;
+    vertical-align:bottom;
+}
+
+.single-pic {
+    object-fit:cover;
+    /* height:280px;
+    */
+    /* width:280px;
+    */
+     width:100%;
+    border-radius:4px;
+}
+.pic {
+    object-fit:cover;
+    height:100px;
+    /* width:100px;
+    */
+     width:100%;
+    border-radius:4px;
+}
+.pic-group {
+    /* flex:0;
+    */
+/*     margin:0px 4px 4px 0px;*/
+}
+.pic-group-in {
+    margin:0.1rem;
+}
+
+
+@media screen and (max-width:300px) {
+
+    .pic {
+        object-fit:cover;
+        height:92px;
+        width:92px;
+        border-radius:4px;
+    }
+    .single-pic {
+        object-fit:cover;
+        height:100px;
+        width:100px;
+        border-radius:4px;
+    }
+    .loadbtn {
+        border-radius:0px;
+    }
+
+    #app {
+        border-radius:0px;
+    }
+}
+
+@media screen and (min-width:301px) and (max-width:500px) {
+  
+    .pic {
+        object-fit:cover;
+        height:92px;
+        width:92px;
+        border-radius:4px;
+    }
+    .single-pic {
+        object-fit:cover;
+        height:220px;
+        width:220px;
+        border-radius:4px;
+    }
+    .loadbtn {
+        border-radius:0px;
+    }
+    #app {
+    /*    border-radius:0px;*/
+        border-radius:  0.5rem 0.5rem 0.5rem 0.5rem;;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:700px) {
+  
+    .pic {
+        object-fit:cover;
+        height:120px;
+        width:120px;
+        border-radius:4px;
+    }
+    .single-pic {
+        object-fit:cover;
+        height:250px;
+        width:250px;
+        border-radius:4px;
+    }
+    .loadbtn {
+        border-radius:0px;
+    }
+   
+    #app {
+        border-radius:0px;
+    }
+}
+
+@media screen and (min-width:701px) and (max-width:900px) {
+  
+    .pic {
+        object-fit:cover;
+        height:125px;
+        width:125px;
+        border-radius:4px;
+    }
+    .single-pic {
+        object-fit:cover;
+        height:280px;
+        width:280px;
+        border-radius:4px;
+    }
+
+}
+
+@media screen and (min-width:901px) and (max-width:1200px) {
+  
+    .pic {
+        object-fit:cover;
+        height:192px;
+        width:192px;
+        border-radius:4px;
+    }
+    .single-pic {
+        object-fit:cover;
+        /* height:320px;
+        width:320px;
+        */
+              height:330px;
+        width:330px;
+        border-radius:4px;
+    }
+
+}
+
+@media screen and (min-width:1201px) {
+     
+    .pic {
+        object-fit:cover;
+        /* height:218px;
+        width:218px;
+        */
+              height:180px;
+        width:180px;
+        border-radius:4px;
+    }
+    .single-pic {
+        object-fit:cover;
+        height:380px;
+        width:380px;
+        border-radius:4px;
+    }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="片刻" />
+    <title>片刻 | 好事发生</title>
+    <link rel="stylesheet" href="/css/style.css" /> 
+    <link rel="stylesheet" href="/css/fonts.css" /> 
+    <link rel="stylesheet" href="/css/syntax.css" />
+    <link rel="icon" href="https://storage.hanyu.me/resource/img/icon/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest" />
+    <link href="index.xml" type="application/atom+xml" rel="alternate" title="小韩好事发生">
+    <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/11.4.0/styles/default.min.css" type="text/css" rel="stylesheet" />
+</head>
+<body><body>
+  <h1 class="site-title">好事发生</h1>
+  <nav>
+    <ul class="menu">
+      
+      <li><a class="no-tag" href="/">Posts</a></li>
+      
+      <li><a class="no-tag" href="/moment/">Moments</a></li>
+      
+      <li><a class="no-tag" href="/about/">About</a></li>
+      
+      <li><a class="no-tag" href="https://hanyu.me">Home</a></li>
+      
+    </ul>
+    <hr />
+  </nav>
+</body>
+<div id="content">
+<link rel="stylesheet" href="/css/moment.css" />
+<div>
+  <h1><span class="title">片刻</span></h1>
+  
+</div>
+
+
+<main id="app"  v-cloak>
+
+      <div v-for="obj in items">
+        
+        <div v-html="markedContent(obj.content)" class="text" style="padding-bottom:5px">
+        </div>
+        <div class="pic-group" style="display: flex;flex-wrap: wrap;align-content: center;">
+            <div v-for="pic in obj.resourceList" class="pic-group-in">
+                <template v-if="pic.type.indexOf('image') != -1">
+                  <a class="no-tag fancybox" rel="group" :href="pic.externalLink" :data-fancybox="'group'+obj.id" data-caption="">
+                    <img :src="pic.externalLink + preAndSuf.remoteImgSuffix" :class="imgClassHanle(obj)"/>
+                  </a>
+                </template>
+
+                <template v-if="pic.type.indexOf('video') != -1">
+                  <a class="no-tag fancybox" rel="group" :href="pic.externalLink" :data-fancybox="'group'+obj.id"
+                                    data-caption="">
+                    <video preload="none" controls="controls" :src="pic.externalLink"
+                    :class="imgClassHanle(obj)">
+                    </video>
+                  </a>
+                </template>
+            </div>
+        </div>
+
+        <div style="text-align: right;">
+          {[ formatDate(obj.createdTs) ]}
+        </div>
+        <br>
+        
+      </div>
+
+      <div class="foot-menu" v-show="button.loadbtn.loadmore">
+          <button id="buton" @click="next" class="loadbtn">
+              {[ button.loadbtn.text ]}
+          </button>
+      </div>
+
+</main>
+
+
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/3.2.31/vue.global.min.js" type="application/javascript"></script>
+
+<script src=https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js>
+</script>
+
+<link href=https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css
+rel=stylesheet>
+
+<script src=https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.js>
+</script>
+<script src=https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/marked/4.0.2/marked.min.js>
+</script>
+<script src=https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/11.4.0/highlight.min.js>
+</script>
+
+<script src=/js/index.js>
+</script>
+
+<style type="text/css">
+  .compensate-for-scrollbar{margin:auto;}
+</style>
+<script type="text/javascript">
+
+
+
+$(document).ready((function (_this) {
+     $('[data-fancybox="gallery"]').fancybox();
+$(".fancybox").fancybox();
+
+  return function () {
+    let bt
+    bt = $('#back_to_top')
+    if ($(document).width() > 480) {
+      $(window).scroll(function () {
+        let st
+        st = $(window).scrollTop()
+        if (st > 30) {
+          return bt.css('display', 'block')
+        } else {
+          return bt.css('display', 'none')
+        }
+      })
+      return bt.click(function () {
+        $('body,html').animate({
+          scrollTop: 0,
+        }, 800)
+        return false
+      })
+    }
+  }
+})(this));
+
+
+
+</script>
+</div><footer>
+  <hr />
+  <small
+    >Copyright 2021-2024
+        <a href="https://github.com/okhanyu" target="_blank">Damon</a><span>
+    All articles on this site are licensed under a
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a >
+  </small>
+</footer>
+</body>
+</html>
