@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>好事发生</title>
-    <link>https://blog.hanyu.me/</link>
+    <link>https://blog.hahaha.cc/</link>
     <description>好事发生</description>
     
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 15 Jul 2024 23:18:00 +0800</lastBuildDate><atom:link href="https://blog.hanyu.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Jul 2024 23:18:00 +0800</lastBuildDate><atom:link href="https://blog.hahaha.cc/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>要使用业务唯一ID做主键吗？</title>
-      <link>https://blog.hanyu.me/tech/4/</link>
+      <link>https://blog.hahaha.cc/tech/4/</link>
       <pubDate>Thu, 04 Jul 2024 17:51:21 +0800</pubDate>
       
-      <guid>https://blog.hanyu.me/tech/4/</guid>
+      <guid>https://blog.hahaha.cc/tech/4/</guid>
       <description>注意：
 本篇文章需阅读者掌握MySQL索引基本原理，可提前阅读 MySQL系列 | 浅尝MySQL索引 本篇文章涉及的V2帖子，没有特殊能力者，是访问不通的 本人无特殊能力去看V2帖子，是不小心在某个地方看到，已全然忘记出处，是一位遵纪守法的好公民 看到V2一篇帖子中的提问：https://go.lion.im/sk7qf ，促使我写下了这篇文章。
 这位楼主的问题看似简单，但挺值得思考的。
@@ -24,10 +24,10 @@
     
     <item>
       <title>成为别人，而非自己</title>
-      <link>https://blog.hanyu.me/life/26/</link>
+      <link>https://blog.hahaha.cc/life/26/</link>
       <pubDate>Mon, 05 Feb 2024 18:22:00 +0800</pubDate>
       
-      <guid>https://blog.hanyu.me/life/26/</guid>
+      <guid>https://blog.hahaha.cc/life/26/</guid>
       <description>我不对。
 这一年，频繁的将注意力放在一些不重要的、细微的事物上。
 这让我迷失，浪费了大量的时间与心力，变得缺乏目标感、缺少行动力，无论是同比，还是环比，自身不仅没有成长和进步，甚至在倒退。
@@ -40,10 +40,10 @@
     
     <item>
       <title>为什么小白更该使用静态博客</title>
-      <link>https://blog.hanyu.me/life/27/</link>
+      <link>https://blog.hahaha.cc/life/27/</link>
       <pubDate>Sun, 08 Oct 2023 16:40:00 +0800</pubDate>
       
-      <guid>https://blog.hanyu.me/life/27/</guid>
+      <guid>https://blog.hahaha.cc/life/27/</guid>
       <description>（＾∀＾）。
 背景 我是很抗拒写各种折腾类、教程类的文字的。
 但最近群里小伙伴的云服务器持续被探测扫描、数据库间歇性瘫痪，我想还是简单分享下我的思考。
@@ -56,10 +56,10 @@
     
     <item>
       <title>博客疑问一二三</title>
-      <link>https://blog.hanyu.me/life/20/</link>
+      <link>https://blog.hahaha.cc/life/20/</link>
       <pubDate>Sun, 10 Sep 2023 22:25:55 +0800</pubDate>
       
-      <guid>https://blog.hanyu.me/life/20/</guid>
+      <guid>https://blog.hahaha.cc/life/20/</guid>
       <description>在一个茅塞顿开的晚上，我坐在马桶上，突然意识到以下问题。
 为什么不开评论？ 1.我担心你不夸我 2.我担心你人品不行，怕你撒野
 3.我担心我不够温柔，怕我回击 4.喜好动手，打不到你我会难受
@@ -71,10 +71,10 @@
     
     <item>
       <title>奇怪的自信</title>
-      <link>https://blog.hanyu.me/life/19/</link>
+      <link>https://blog.hahaha.cc/life/19/</link>
       <pubDate>Thu, 24 Aug 2023 20:58:50 +0800</pubDate>
       
-      <guid>https://blog.hanyu.me/life/19/</guid>
+      <guid>https://blog.hahaha.cc/life/19/</guid>
       <description>自信第一层 最近发现了一些奇怪的自信，比如此刻，楼下的主干路上传来劣质音箱和麦克发出的歌声，从《爱就一个字》唱到《江南》再到《慢慢喜欢你》，张信哲、林俊杰、莫文蔚如果听到，必然是要流泪的。
 当我写下这句话的时候，我已经忘记了她具体还唱了哪些，因为着实刺耳，连耗费几万块安装的断桥铝三层隔音玻璃窗户，也无法阻挡这噪声的穿透力。我尽可能关闭耳朵，让自己别把注意力放在猜歌名上，事与愿违，最后没忍住，打开了 …</description>
     </item>
@@ -83,10 +83,10 @@
     
     <item>
       <title>发丝的逃离</title>
-      <link>https://blog.hanyu.me/life/17/</link>
+      <link>https://blog.hahaha.cc/life/17/</link>
       <pubDate>Tue, 20 Jun 2023 14:41:00 +0800</pubDate>
       
-      <guid>https://blog.hanyu.me/life/17/</guid>
+      <guid>https://blog.hahaha.cc/life/17/</guid>
       <description>我一直还算信奉一个道理，大部分期望得到的，都应该要循序渐进的。
 财富、影响力、学识、身高体重，又或是各种XX主义互相争夺的稀缺权力，也是要循序渐进为佳，否则容易适得其反。
 但也存在例外，例如我本应日渐后退的发际线，却像突然爆发了战争，边塞失守，残余的败兵们丢盔弃甲仓皇而逃，毫不留恋。
@@ -97,10 +97,10 @@
     
     <item>
       <title>高并发短链系统设计</title>
-      <link>https://blog.hanyu.me/tech/3/</link>
+      <link>https://blog.hahaha.cc/tech/3/</link>
       <pubDate>Thu, 04 May 2023 10:01:22 +0800</pubDate>
       
-      <guid>https://blog.hanyu.me/tech/3/</guid>
+      <guid>https://blog.hahaha.cc/tech/3/</guid>
       <description>原则与底线：不说废话、不凑字数、不标题党。
 注：本文均为韩宇的胡思乱写，你随便抄
 背景 什么是短链 一个长的网址链接，转换为一个短的网址链接。
@@ -112,25 +112,24 @@
     
     <item>
       <title>关于</title>
-      <link>https://blog.hanyu.me/about/</link>
+      <link>https://blog.hahaha.cc/about/</link>
       <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.hanyu.me/about/</guid>
+      <guid>https://blog.hahaha.cc/about/</guid>
       <description>我 🥤 我是韩，可以小韩，也可以是老韩。
 英文名字Damon，取自美剧《吸血鬼日记》中亦正亦邪的Damon； 90年狮子座，社交牛逼症、厌蠢症； 飞盘、羽毛球、跑步、喝酒、打牌、泡澡、露营，好的坏的都爱； 从事研发工作，擅长使用 Go / Java； 文笔不好，却爱记录。 技术公众号：今天404（目前年更）
 日常公众号：小韩的冰镇汽水（常年无更）
-现用域名：hanyu.me 、hahaha.cc
- …</description>
+现用域名：hahaha.cc 、 hanyu.me …</description>
     </item>
     
     
     
     <item>
       <title>大厂面试复盘</title>
-      <link>https://blog.hanyu.me/growing/1/</link>
+      <link>https://blog.hahaha.cc/growing/1/</link>
       <pubDate>Fri, 25 Feb 2022 00:19:49 +0800</pubDate>
       
-      <guid>https://blog.hanyu.me/growing/1/</guid>
+      <guid>https://blog.hahaha.cc/growing/1/</guid>
       <description>面试题： 2021年末面试题(一些不好言说的原因，需要申请权限)
 背景 哈喽，我是Damon，现在是2022了，年前11月上旬到12月上旬一直在面试，年后很多很多人催着我出面经，现在我一说话就问我“面经好了没，我等着去面试” 🤣🤣🤣，所以赶了几个周末，一个字一个字的纯手敲总结，面试题、简历模板、薪酬对比模板在下面。
 无论如何，老铁们先来个一键四连（关注公众号：韩宇Pro、点赞、在看、转发朋友圈）嘻 …</description>
@@ -140,10 +139,10 @@
     
     <item>
       <title>浅尝MySQL索引</title>
-      <link>https://blog.hanyu.me/tech/2/</link>
+      <link>https://blog.hahaha.cc/tech/2/</link>
       <pubDate>Wed, 09 Feb 2022 17:28:32 +0800</pubDate>
       
-      <guid>https://blog.hanyu.me/tech/2/</guid>
+      <guid>https://blog.hahaha.cc/tech/2/</guid>
       <description>写在前面的废话 Hello，大家好，我是Damon，一年前我写了一篇文章，然后拖更至今。 这其中有自己懒惰、工作变动等因素，年前这段时间一直在求职面试，拿到了些一线大厂和一些独角兽的offer。这段时间面试的经验和学习的过程对我自己帮助很大，面经还在整理中，后续会发出来给大家做一个参考吧。
 因为每家公司的面试官不同，出题也是千遍万化，所以有些基础的核心知识，必须要体系化的学习，今天写这篇MySQL …</description>
     </item>
@@ -152,10 +151,10 @@
     
     <item>
       <title>分布式锁之电商防超卖的N&#43;1个坑</title>
-      <link>https://blog.hanyu.me/tech/1/</link>
+      <link>https://blog.hahaha.cc/tech/1/</link>
       <pubDate>Tue, 23 Mar 2021 22:40:49 +0800</pubDate>
       
-      <guid>https://blog.hanyu.me/tech/1/</guid>
+      <guid>https://blog.hahaha.cc/tech/1/</guid>
       <description>大家好，我是Damon。
 今天和同事讨论库存防超卖问题，发现虽然只是简单的库存扣减场景，却隐藏着很多坑，一不小心就容易翻车，让我来填平这些坑。
 单实例环境 一般电商体系防止库存超卖，主要有以下几种方式：
