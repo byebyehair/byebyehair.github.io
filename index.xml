@@ -6,7 +6,21 @@
     <description>好事发生</description>
     
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 15 Jul 2024 23:18:00 +0800</lastBuildDate><atom:link href="https://blog.hahaha.cc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Jul 2024 04:05:00 +0800</lastBuildDate><atom:link href="https://blog.hahaha.cc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>独立博客的评论趣谈</title>
+      <link>https://blog.hahaha.cc/life/32/</link>
+      <pubDate>Mon, 22 Jul 2024 04:05:00 +0800</pubDate>
+      
+      <guid>https://blog.hahaha.cc/life/32/</guid>
+      <description>注: 本篇文章中，使用了较多的成语，现学现卖，万望海涵，如有不适，请和我一起学。
+最近看到一位博主的文章 独立博客上我不喜欢的“功能” 下面的评论时，发现很多人对独立博客进行评论时需要登录或授权的情况都颇为抵触。
+恰好，我的博客最近安装了Giscus评论系统，这套评论系统的设计理念、依托环境、界面美感都不错，但它需要使用Github进行授权登录才能进行评论。
+当然，作为一个开发者，我手拿把掐的使用 …</description>
+    </item>
+    
+    
     
     <item>
       <title>要使用业务唯一ID做主键吗？</title>
@@ -55,7 +69,7 @@
     
     
     <item>
-      <title>博客疑问一二三</title>
+      <title>个站一二三</title>
       <link>https://blog.hahaha.cc/life/20/</link>
       <pubDate>Sun, 10 Sep 2023 22:25:55 +0800</pubDate>
       
@@ -63,8 +77,10 @@
       <description>在一个茅塞顿开的晚上，我坐在马桶上，突然意识到以下问题。
 为什么不开评论？ 1.我担心你不夸我 2.我担心你人品不行，怕你撒野
 3.我担心我不够温柔，怕我回击 4.喜好动手，打不到你我会难受
-5.个人网站是我的公开记录本，记录我的思考、生活，以及看法，也就是说，这里应该记录我对事物的评论与感受，而不是反过来展示你对我的感受，我写，你看，如此甚好 6.平日交流甚多，此处需要安静
-为什么没有友链？ …</description>
+5.个人网站是我的公开写字本，也就是说，这里记录我的感受，而不是反过来展示你对我的感受，我写，你看，挺好
+为什么没有友链？ 1.友链内容不可控
+2.今天喜欢明天不爱 3.私密收藏独自享受
+为什么不添加广告？ …</description>
     </item>
     
     
