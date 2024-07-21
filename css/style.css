@@ -225,7 +225,8 @@ strong, b, em {
     padding: 0 0.4em;
     border-radius: 0.8em 0.3em;
     background: 0 0;
-    background-image: linear-gradient(to right, rgba(255, 225, 0, .1), rgba(255, 225, 0, .7) 4%, rgba(255, 225, 0, .3));
+    background-image: linear-gradient(to right, #7aa8744c, rgba(122, 168, 116, 0.1));
+/*    background-image: linear-gradient(to right, rgba(255, 225, 0, .1), rgba(255, 225, 0, .7) 4%, rgba(255, 225, 0, .3));*/
     -webkit-box-decoration-break: clone;
 }
 
