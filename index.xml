@@ -141,21 +141,6 @@
     
     
     <item>
-      <title>关于</title>
-      <link>https://blog.hahaha.cc/about/</link>
-      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.hahaha.cc/about/</guid>
-      <description>我 🥤 我是韩，可以小韩，也可以是老韩。
-英文名字Damon，取自美剧《吸血鬼日记》中亦正亦邪的Damon； 90年狮子座，社交牛逼症、厌蠢症； 飞盘、羽毛球、跑步、喝酒、打牌、泡澡、露营，好的坏的都爱； 从事研发工作，擅长使用 Go / Java； 文笔不好，却爱记录。 技术公众号：今天404（目前年更）
-日常公众号：小韩的冰镇汽水（常年无更）
-现用域名：hahaha.cc、 hanyu.me
- …</description>
-    </item>
-    
-    
-    
-    <item>
       <title>大厂面试复盘</title>
       <link>https://blog.hahaha.cc/growing/1/</link>
       <pubDate>Fri, 25 Feb 2022 00:19:49 +0800</pubDate>
@@ -191,6 +176,21 @@
 单实例环境 一般电商体系防止库存超卖，主要有以下几种方式：
 防止库存超卖，最先想到的可能就是「锁」，如果是一些单实例部署的库存服务，大部分情况下我们可以使用以下锁或并发工具类：
 这三个任何一个都可以保证同一单位时间只有一个线程能够进行库存扣减，废话不多说， …</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>关于</title>
+      <link>https://blog.hahaha.cc/about/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.hahaha.cc/about/</guid>
+      <description>这里和我 🥤 我是小韩，也是老韩。
+自我表达，日常分享，思考记录，好事发生。
+RSS 📡 RSS地址 https://blog.hahaha.cc/index.xml
+联系 📟 Email: hi#️⃣hahaha.cc
+请将#️⃣改为@</description>
     </item>
     
     
