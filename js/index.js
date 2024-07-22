@@ -1,5 +1,5 @@
 var offset = 0;
-var limit = 5;
+var limit = 15;
 // var server = "https://moment.hahaha.cc/api/v1/memo";
 var server = "https://moment.hahaha.cc/";
 
