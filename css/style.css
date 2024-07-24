@@ -40,6 +40,10 @@ a {
 /*  font-weight: 600;*/
 }
 
+a:hover{
+  opacity: 0.6;
+}
+
 li a{
   color: var(--primary-color); 
   text-decoration: none;
