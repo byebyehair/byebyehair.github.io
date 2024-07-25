@@ -66,8 +66,8 @@ li a{
 }
 
 .lists{
-  border-bottom: 1px dashed rgba(224, 229, 235, 0.7);
-  padding: 20px 0px 20px 5px !important;
+/*  border-bottom: 1px dashed rgba(224, 229, 235, 0.7);*/
+  padding: 15px 0px 15px 5px !important;
 }
 
 .title {
