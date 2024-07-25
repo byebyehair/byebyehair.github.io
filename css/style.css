@@ -85,7 +85,7 @@ li a{
    line-height: 0.8;height: auto;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
 }
 .tag {
-  font-size:0.1em;
+  font-size:0.80em;
 }
 
 .number{
