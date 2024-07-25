@@ -1,5 +1,6 @@
 :root{
-      --primary-color: #055d20;
+/*      --primary-color: #055d20;*/
+      --primary-color: #578473e3;
       --primary-color-line-opacity: #055d203b;
       --primary-color-other: #f60c3e;
       --primary-font-color: #000000e3;
@@ -13,6 +14,10 @@ body {
   text-align: justify;
 /*  text-justify: inter-ideograph;*/
 /*  font-weight: 400;*/
+}
+
+main p{
+  color: var(--primary-font-color);
 }
 
 h1,h2,h3,h4,h5,h6 {
