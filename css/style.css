@@ -332,3 +332,32 @@ strong, b, em {
     -webkit-box-decoration-break: clone;
 }
 
+
+
+a[target="_blank"] {
+    position: relative; /* 设置为相对定位 */
+}
+main a[target="_blank"]::after {
+    position: absolute; /* 设置为绝对定位 */
+    content: "↗";
+/*    display: inline-block;*/
+    width: 5px; /* 图标宽度 */
+    height: 5px; /* 图标高度 */
+    margin-left: 1px; 
+    vertical-align: middle; /* 垂直居中 */
+    font-size:0.3rem;
+}
+
+
+.external-icon::after {
+    content: '\2192'; /* 这是一个箭头符号，你可以替换成你的图标字符 */
+    font-size: 0.6em; /* 调整图标大小 */
+    color: #999; /* 图标颜色 */
+    margin-left: 5px; /* 间距 */
+    vertical-align: middle; /* 垂直居中 */
+}
+
+.external-icon::after {
+    content: '\f039'; /* 替换为你的图标字符 */
+}
+
