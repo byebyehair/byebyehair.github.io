@@ -67,7 +67,7 @@ li a{
 
 .lists{
 /*  border-bottom: 1px dashed rgba(224, 229, 235, 0.7);*/
-  padding: 7px 0px 7px 5px !important;
+  padding: 10px 0px 10px 5px !important;
 }
 
 .title {
@@ -219,7 +219,7 @@ td {
 }
 
 .title {
-  font-size: 1.0em;
+  font-size: 1.05em;
 }
 
 footer a {
