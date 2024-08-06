@@ -398,3 +398,16 @@ main a[target="_blank"]::after {
     content: '\f039'; /* 替换为你的图标字符 */
 }
 
+
+
+
+@media (max-width: 450px) {
+   .content{
+      background-color: white;
+      padding: 15px;
+      overflow: unset;
+      border: 1px solid var(--content-border);
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, .24);
+  }
+}
