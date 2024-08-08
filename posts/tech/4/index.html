@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="要使用业务唯一ID做主键吗？" />
+    <title>要使用业务唯一ID做主键吗？ | 好事发生</title>
+    <link rel="stylesheet" href="/css/style.css" /> 
+    <link rel="stylesheet" href="/css/fonts.css" /> 
+    <link rel="stylesheet" href="/css/syntax.css" />
+    <link rel="icon" href="https://storage.hahaha.cc/resource/img/icon/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest" />
+    <link href="index.xml" type="application/atom+xml" rel="alternate" title="好事发生，大宇不治水，老韩，小韩">
+    <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/11.4.0/styles/default.min.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div class="content"><body>
+  <h1 class="site-title">好事发生</h1>
+  <nav>
+    <ul class="menu"  >
+      
+      <li><a class="no-tag" href="/" style="color: var(--primary-color);">Posts</a></li>
+      
+      <li><a class="no-tag" href="/moment/" style="color: var(--primary-color);">Moments</a></li>
+      
+      <li><a class="no-tag" href="/project/" style="color: var(--primary-color);">Project</a></li>
+      
+      <li><a class="no-tag" href="/about/" style="color: var(--primary-color);">About</a></li>
+      
+    </ul>
+    <hr />
+  </nav>
+</body>
+<div id="content">
+<div>
+  <h1><span class="title">要使用业务唯一ID做主键吗？</span></h1>
+  <h4 class="single-date ">
+   
+    <span class="initpost">Published at:</span> 2024/07/04
+  </h4>
+
+  <div>
+
+<aside style="line-height: 1.2rem;font-size: 0.8rem;">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#非自增主键会产生的问题">非自增主键会产生的问题</a>
+      <ul>
+        <li><a href="#性能问题">性能问题</a></li>
+        <li><a href="#空间问题">空间问题</a></li>
+      </ul>
+    </li>
+    <li><a href="#业务唯一id适合作为主键的场景">业务唯一ID适合作为主键的场景</a>
+      <ul>
+        <li><a href="#有限场景一">有限场景一</a></li>
+        <li><a href="#有限场景二">有限场景二</a></li>
+      </ul>
+    </li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
+</nav>
+</aside>
+</div>
+
+</div>
+
+
+<main><p>注意：</p>
+<ol>
+<li>本篇文章需阅读者掌握MySQL索引基本原理，可提前阅读  <a href="https://mp.weixin.qq.com/s/5UbmpnxmIV9ZDnAF9KaYdg">MySQL系列 | 浅尝MySQL索引</a></li>
+<li>本篇文章涉及的V2帖子，没有特殊能力者，是访问不通的</li>
+<li>本人无特殊能力去看V2帖子，是不小心在某个地方看到，已全然忘记出处，是一位遵纪守法的好公民</li>
+</ol>
+<hr>
+<p>看到V2一篇帖子中的提问：<a href="https://go.lion.im/sk7qf">https://go.seeyou.me/sk7qf </a>  ，促使我写下了这篇文章。</p>
+<p><img src="https://storage.hahaha.cc/files/blog/tech/4/img/1.png" alt=""></p>
+<p>这位楼主的问题看似简单，但挺值得思考的。</p>
+<p>这个问题我曾经想当然的认为，答案就应该是“需要使用自增ID列作为主键”，直到曾经一次滴滴的面试，被问到几乎同样的问题，才进行了深度的思考。</p>
+<p>很多时候我们在设计数据库表的时候，明明已经有了一个逻辑上的唯一ID，却依然新建了一个自增的ID作为物理主键，在业务上却毫无用处，仿佛就像人要吃饭睡觉一样自然，why?</p>
+<h2 id="非自增主键会产生的问题">非自增主键会产生的问题</h2>
+<p>我们先来看看，为什么我们需要一个自增的主键？</p>
+<h3 id="性能问题">性能问题</h3>
+<p>MySQL InnoDB 引擎的主键索引是一棵B+树结构，为了维护索引数据的有序性，会对新增数据进行比较，如果大于最大值，则只需要在最后记录后面插入一个新记录，如果小于，那么会去查找应该插入的具体位置。</p>
+<h4 id="页分裂">页分裂</h4>
+<p>由于数据页的大小默认是16KB，如果恰巧要插入数据的数据页已满，就需要在此位置申请一个新的数据页，然后迁移部分数据过去，这个过程称为页分裂。</p>
+<p>所以，如果我们的主键是自增的，那么每次新增数据，都会直接在最大记录后插入，非常高效。</p>
+<h3 id="空间问题">空间问题</h3>
+<h4 id="页空洞">页空洞</h4>
+<p>如果主键是非自增的，除了要在插入过程中，经过多次比较、页分裂导致数据挪动等额外的耗时操作外，还会产生页空洞，致使空间利用率下降。</p>
+<h4 id="辅助索引">辅助索引</h4>
+<p>当我们为了高效多维度查询，对一张表创建了多个辅助索引时，辅助索引的叶子节点存储的是主键值。</p>
+<p>如果我们使用业务上的唯一ID来做主键，由于一般业务上的唯一ID为了保证唯一性，生成的ID可能较长，那么所有辅助索引的叶子节点数据都会变大。   <br>
+例如，用18位身份证号做主键，刨除其他额外信息，需要18个字节，而如果使用整型自增，则只需要4字节。</p>
+<p>综上来看，无论是从性能上，还是空间占用上，我们确实应该使用自增ID列做主键，而不应该使用业务唯一ID来做主键。</p>
+<p>那么，所有场景都该如此吗？不，当然不是。</p>
+<h2 id="业务唯一id适合作为主键的场景">业务唯一ID适合作为主键的场景</h2>
+<p>什么场景下，我们可以使用业务唯一ID来做主键呢？</p>
+<h3 id="有限场景一">有限场景一</h3>
+<ul>
+<li>业务唯一ID必须是自增趋势的</li>
+<li>只会有一个主键索引</li>
+</ul>
+<p>如果同时满足以上两点，那么使用业务唯一ID作为主键是最佳的。</p>
+<p>因为如果此时，再去建立自增ID列，那么必然要基于业务唯一ID建立辅助索引，我们知道，由于自增ID是不会在业务中被使用的，所以我们的查询，都要基于业务唯一ID来进行，这样将会在每次查询时，造成回表。</p>
+<p>所以，使用业务唯一ID作为主键既避免了回表操作，又保证了主键的递增趋势，也不需要创建辅助索引，一举三得。</p>
+<h3 id="有限场景二">有限场景二</h3>
+<ul>
+<li>读多写少</li>
+<li>数据量小</li>
+</ul>
+<p>假设你的业务唯一ID不是自增趋势，是否可以使用它做主键呢？<br>
+答案是可以。</p>
+<p>但要满足以上两个条件，第一是，这张表，必须是读多写少的，例如我曾在一家在线教育公司任职，课程产品表，就是一个读多写极少，且数据量很小的表，即使课程唯一ID无序，也完全可以作为主键，对性能几乎无影响，新增频率极低。</p>
+<hr>
+<h2 id="总结">总结</h2>
+<p>其实当我们的软硬件资源足够充沛，并可预见的能持续保持时，我们可以减少一些开发、设计细节上的斟酌和处理，但是，思考却不能敷衍。</p>
+<p>不同的外部条件下，我们的行为可能会做出调整或取舍，但思考必须是细致的、全面的、尽力的，为作品，也为自己的成长。</p>
+<p>公众号： <a href="https://mp.weixin.qq.com/s?__biz=MzI1MTE2MTE2OQ==&amp;mid=2650067595&amp;idx=1&amp;sn=f386855822593b5e4ccf5050c9c6a2e0&amp;chksm=f1f74db5c680c4a3f291288a583d9a86c256681aa1808010d6fc74ddd47e6d5c4c56845fe6d4&amp;token=180910393&amp;lang=zh_CN#rd">今天404</a></p>
+</main>
+
+<div class="discussion">
+  <script src="https://giscus.app/client.js" data-repo="okhanyu/blog" data-repo-id="R_kgDOMYilrw"
+    data-category="Announcements" data-category-id="DIC_kwDOMYilr84ChCbQ" data-mapping="pathname" data-strict="0"
+    data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light_high_contrast"
+    data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async></script>
+</div>
+
+<script src=https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js>
+</script>
+
+<link href=https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css
+rel=stylesheet>
+<script src=https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.js>
+</script>
+
+<style type="text/css">
+  .compensate-for-scrollbar{margin:auto;}
+</style>
+<script type="text/javascript">
+
+
+     
+$(document).ready((function (_this) {
+     $('[data-fancybox="gallery"]').fancybox();
+$(".fancybox").fancybox();
+
+  return function () {
+    let bt
+    bt = $('#back_to_top')
+    if ($(document).width() > 480) {
+      $(window).scroll(function () {
+        let st
+        st = $(window).scrollTop()
+        if (st > 30) {
+          return bt.css('display', 'block')
+        } else {
+          return bt.css('display', 'none')
+        }
+      })
+      return bt.click(function () {
+        $('body,html').animate({
+          scrollTop: 0,
+        }, 800)
+        return false
+      })
+    }
+  }
+})(this));
+
+
+
+</script>
+
+
+<script src=/js/blog.js>
+</script>
+</div><footer>
+  <hr />
+  <small
+    >Copyright 2021-2024
+        <a href="https://github.com/okhanyu" target="_blank">Damon</a><span>
+    All articles on this site are licensed under a
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+    <div style="display: flex;flex-wrap: wrap;flex-direction: row;align-items: center;font-size: 0.5em;opacity: 0.5;" id="icpga">
+      <a  href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502054294" target="_blank" id="ga">
+        <img width="6px" src="./assets/ba.png" style="width:9px;display: inline;border: 0px;">
+       京公网安备11010502054294号
+      </a> 
+      <span>&nbsp;·&nbsp;</span>
+      <a id="icp" href="https://beian.miit.gov.cn/" target="_blank"> 
+        京ICP备18031874号-12号 
+      </a>
+    </div>
+  </small>
+</footer>
+
+
+ <script type="text/javascript">
+        function showRecordNumber() {
+            var hostname = window.location.hostname;
+
+            if (hostname.indexOf("hahaha.cc") != -1){
+              document.getElementById('icp').innerText = "京ICP备18031874号-9号";
+            }else if (hostname.indexOf("hahaha.cc") != -1){
+              document.getElementById('icp').innerText = "京ICP备18031874号-12号";
+            }else if (hostname.indexOf("404.site") != -1){
+              document.getElementById('icp').innerText = "京ICP备18031874号-13号";
+            }else{
+              
+              document.getElementById('icp').innerText =  "京ICP备18031874号-9号";
+            }
+        }
+        showRecordNumber();
+    </script></div>
+  </body>
+</html>

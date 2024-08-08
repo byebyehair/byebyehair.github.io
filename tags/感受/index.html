@@ -22,9 +22,9 @@
       
       <li><a class="no-tag" href="/moment/" style="color: var(--primary-color);">Moments</a></li>
       
-      <li><a class="no-tag" href="/about/" style="color: var(--primary-color);">About</a></li>
+      <li><a class="no-tag" href="/project/" style="color: var(--primary-color);">Project</a></li>
       
-      <li><a class="no-tag" href="https://hahaha.cc" style="color: var(--primary-color);">Home</a></li>
+      <li><a class="no-tag" href="/about/" style="color: var(--primary-color);">About</a></li>
       
     </ul>
     <hr />
@@ -174,7 +174,7 @@
         
         
         
-        <a class="no-tag title" href="/life/26/" >成为别人，而非自己 
+        <a class="no-tag title" href="/posts/life/26/" >成为别人，而非自己 
         </a> 
         
     </div>
@@ -266,7 +266,7 @@
         
         
         
-        <a class="no-tag title" href="/life/20/" >个站一二三 
+        <a class="no-tag title" href="/posts/life/20/" >个站一二三 
         </a> 
         
     </div>
@@ -289,7 +289,7 @@
         
         
         
-        <a class="no-tag title" href="/life/19/" >奇怪的自信 
+        <a class="no-tag title" href="/posts/life/19/" >奇怪的自信 
         </a> 
         
     </div>
@@ -335,7 +335,7 @@
         
         
         
-        <a class="no-tag title" href="/life/17/" >发丝的逃离 
+        <a class="no-tag title" href="/posts/life/17/" >发丝的逃离 
         </a> 
         
     </div>
@@ -468,9 +468,37 @@
     >Copyright 2021-2024
         <a href="https://github.com/okhanyu" target="_blank">Damon</a><span>
     All articles on this site are licensed under a
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a >
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
+    <div style="display: flex;flex-wrap: wrap;flex-direction: row;align-items: center;font-size: 0.5em;opacity: 0.5;" id="icpga">
+      <a  href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502054294" target="_blank" id="ga">
+        <img width="6px" src="./assets/ba.png" style="width:9px;display: inline;border: 0px;">
+       京公网安备11010502054294号
+      </a> 
+      <span>&nbsp;·&nbsp;</span>
+      <a id="icp" href="https://beian.miit.gov.cn/" target="_blank"> 
+        京ICP备18031874号-12号 
+      </a>
+    </div>
   </small>
 </footer>
-</div>
+
+
+ <script type="text/javascript">
+        function showRecordNumber() {
+            var hostname = window.location.hostname;
+
+            if (hostname.indexOf("hahaha.cc") != -1){
+              document.getElementById('icp').innerText = "京ICP备18031874号-9号";
+            }else if (hostname.indexOf("hahaha.cc") != -1){
+              document.getElementById('icp').innerText = "京ICP备18031874号-12号";
+            }else if (hostname.indexOf("404.site") != -1){
+              document.getElementById('icp').innerText = "京ICP备18031874号-13号";
+            }else{
+              
+              document.getElementById('icp').innerText =  "京ICP备18031874号-9号";
+            }
+        }
+        showRecordNumber();
+    </script></div>
   </body>
 </html>
