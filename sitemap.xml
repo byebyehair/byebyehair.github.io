@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.hahaha.cc/about/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.hahaha.cc/</loc>
+    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.hahaha.cc/categories/</loc>
     <lastmod>2024-07-22T07:18:00+08:00</lastmod>
   </url><url>
@@ -15,9 +21,6 @@
     <lastmod>2024-07-22T07:18:00+08:00</lastmod>
   </url><url>
     <loc>https://blog.hahaha.cc/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2024-07-22T07:18:00+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.hahaha.cc/</loc>
     <lastmod>2024-07-22T07:18:00+08:00</lastmod>
   </url><url>
     <loc>https://blog.hahaha.cc/categories/%E7%94%9F%E6%B4%BB/</loc>
@@ -184,9 +187,6 @@
   </url><url>
     <loc>https://blog.hahaha.cc/posts/tech/1/</loc>
     <lastmod>2021-03-23T22:40:49+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.hahaha.cc/about/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.hahaha.cc/posts/life/0-1/</loc>
     <lastmod>2012-09-27T19:22:06+08:00</lastmod>

@@ -1,44 +1,103 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head>
+<html lang="zh-cn" >
+<head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:title" content="要使用业务唯一ID做主键吗？" />
-    <title>要使用业务唯一ID做主键吗？ | 好事发生</title>
-    <link rel="stylesheet" href="/css/style.css" /> 
-    <link rel="stylesheet" href="/css/fonts.css" /> 
-    <link rel="stylesheet" href="/css/syntax.css" />
-    <link rel="icon" href="https://storage.hahaha.cc/resource/img/icon/favicon.ico">
-    <link rel="manifest" href="/site.webmanifest" />
-    <link href="index.xml" type="application/atom+xml" rel="alternate" title="好事发生，大宇不治水，老韩，小韩">
-    <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/11.4.0/styles/default.min.css" type="text/css" rel="stylesheet" />
-</head>
-<body>
-    <div class="content"><body>
-  <h1 class="site-title">好事发生</h1>
-  <nav>
-    <ul class="menu"  >
-      
-      <li><a class="no-tag" href="/" style="color: var(--primary-color);">Posts</a></li>
-      
-      <li><a class="no-tag" href="/moment/" style="color: var(--primary-color);">Moments</a></li>
-      
-      <li><a class="no-tag" href="/project/" style="color: var(--primary-color);">Project</a></li>
-      
-      <li><a class="no-tag" href="/about/" style="color: var(--primary-color);">About</a></li>
-      
-    </ul>
-    <hr />
-  </nav>
-</body>
-<div id="content">
-<div>
-  <h1><span class="title">要使用业务唯一ID做主键吗？</span></h1>
-  <h4 class="single-date ">
-   
-    <span class="initpost">Published at:</span> 2024/07/04
-  </h4>
+    <meta name="author" content="Damon" />
+	
+	
+	
+	<title>要使用业务唯一ID做主键吗？ ｜ 好事发生</title>
+	
+    
+    
+    <meta name="description" content="注意： 本篇文章需阅读者掌握MySQL索引基本原理，可提前阅读 MySQL系列 | 浅尝MySQL索引 本篇文章涉及的V2帖子，没有特殊能力者，是访问不通的 本人无特殊能力去看V2帖子，是不小心在某个地方看到，已全然忘记出" />
+    
 
-  <div>
+    
+    
+    <meta name="keywords" content="韩宇, hanyu, damon" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://blog.hahaha.cc/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://blog.hahaha.cc/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://blog.hahaha.cc/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://blog.hahaha.cc/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/categories/">Categories</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">Tags</a>
+            </li>
+            
+            <li>
+                <a href="/moment/">Moments</a>
+            </li>
+            
+            <li>
+                <a href="/project/">Project</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://blog.hahaha.cc/">
+                    <span>好事发生</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">愿你我好事发生</p>
+            <div class="my_socials">
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/posts/tech/4/'>要使用业务唯一ID做主键吗？</a></h2>
+                        <span class="date">2024.07.04</span>
+                    </div>
+                    
+                    
+                    <div>
 
 <aside style="line-height: 1.2rem;font-size: 0.8rem;">
     <nav id="TableOfContents">
@@ -60,11 +119,7 @@
 </nav>
 </aside>
 </div>
-
-</div>
-
-
-<main><p>注意：</p>
+                    <div class="post_content markdown"><p>注意：</p>
 <ol>
 <li>本篇文章需阅读者掌握MySQL索引基本原理，可提前阅读  <a href="https://mp.weixin.qq.com/s/5UbmpnxmIV9ZDnAF9KaYdg">MySQL系列 | 浅尝MySQL索引</a></li>
 <li>本篇文章涉及的V2帖子，没有特殊能力者，是访问不通的</li>
@@ -115,82 +170,41 @@
 <p>其实当我们的软硬件资源足够充沛，并可预见的能持续保持时，我们可以减少一些开发、设计细节上的斟酌和处理，但是，思考却不能敷衍。</p>
 <p>不同的外部条件下，我们的行为可能会做出调整或取舍，但思考必须是细致的、全面的、尽力的，为作品，也为自己的成长。</p>
 <p>公众号： <a href="https://mp.weixin.qq.com/s?__biz=MzI1MTE2MTE2OQ==&amp;mid=2650067595&amp;idx=1&amp;sn=f386855822593b5e4ccf5050c9c6a2e0&amp;chksm=f1f74db5c680c4a3f291288a583d9a86c256681aa1808010d6fc74ddd47e6d5c4c56845fe6d4&amp;token=180910393&amp;lang=zh_CN#rd">今天404</a></p>
-</main>
-
-<div class="discussion">
-  <script src="https://giscus.app/client.js" data-repo="okhanyu/blog" data-repo-id="R_kgDOMYilrw"
-    data-category="Announcements" data-category-id="DIC_kwDOMYilr84ChCbQ" data-mapping="pathname" data-strict="0"
-    data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light_high_contrast"
-    data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async></script>
 </div>
-
-<script src=https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js>
-</script>
-
-<link href=https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css
-rel=stylesheet>
-<script src=https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.js>
-</script>
-
-<style type="text/css">
-  .compensate-for-scrollbar{margin:auto;}
-</style>
-<script type="text/javascript">
-
-
-     
-$(document).ready((function (_this) {
-     $('[data-fancybox="gallery"]').fancybox();
-$(".fancybox").fancybox();
-
-  return function () {
-    let bt
-    bt = $('#back_to_top')
-    if ($(document).width() > 480) {
-      $(window).scroll(function () {
-        let st
-        st = $(window).scrollTop()
-        if (st > 30) {
-          return bt.css('display', 'block')
-        } else {
-          return bt.css('display', 'none')
-        }
-      })
-      return bt.click(function () {
-        $('body,html').animate({
-          scrollTop: 0,
-        }, 800)
-        return false
-      })
-    }
-  }
-})(this));
-
-
-
-</script>
-
-
-<script src=/js/blog.js>
-</script>
-</div><footer>
-  <hr />
-  <small>Copyright 2021-2024
-        <a href="https://github.com/okhanyu" target="_blank">Damon</a><span>&nbsp;
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>
-    <div style="display: flex;flex-wrap: wrap;flex-direction: row;align-items: center;font-size: 0.5em;opacity: 0.5;" id="icpga">
-      <a style="display: flex;align-items: center;" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502054294" target="_blank" id="ga">
-        <img width="6px" src="/assets/img/ba.png" style="width:9px;display: inline;border: 0px;">
-       京公网安备11010502054294号
-      </a> 
-      <span>&nbsp;·&nbsp;</span>
-      <a id="icp" href="https://beian.miit.gov.cn/" target="_blank"> 
-        京ICP备18031874号-12号 
-      </a>
+                    
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://blog.hahaha.cc/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="doc_comments"></div>
+                
+            </div>
+        </div>
     </div>
-  </small>
-</footer>
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+        <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502054294"><img width="6px" src="/images/ba.png" style="width:9px;display:inline;border:0">京公网安备11010502054294号</a>
+        <a id="icp"  href="https://beian.miit.gov.cn/">京ICP备18031874号-9号</a>
+    </div>
 
+    <div class="footer_slogan">
+        <span></span>
+    </div>
+</footer>
 
  <script type="text/javascript">
         function showRecordNumber() {
@@ -208,6 +222,52 @@ $(".fancybox").fancybox();
             }
         }
         showRecordNumber();
-    </script></div>
-  </body>
+    </script>
+    <script src="https://blog.hahaha.cc/js/jquery-3.5.1.min.js"></script>
+<link href="https://blog.hahaha.cc/css/fancybox.min.css" rel="stylesheet">
+<script src="https://blog.hahaha.cc/js/fancybox.min.js"></script>
+<script src="https://blog.hahaha.cc/js/zozo.js"></script>
+
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
+
+
+
+</body>
+
 </html>
