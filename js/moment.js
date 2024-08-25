@@ -1,7 +1,7 @@
 var offset = 0;
 var limit = 15;
 // var server = "https://moment.hahaha.cc/api/v1/memo";
-var server = "https://moment.hahaha.cc/";
+var server = "https://api.hanyu.me/moment/";
 
 const {
     createApp
@@ -15,7 +15,7 @@ const app = createApp({
             users:[],
             items: [],
             preAndSuf: {
-                localImgPrefix: "https://moment.hahaha.cc/o/r/",
+                localImgPrefix: "https://https://api.hanyu.me/moment/o/r/",
                 localImgSuffix: "?thumbnail=1",
                 remoteImgSuffix: "?q=15",
             },
@@ -27,7 +27,7 @@ const app = createApp({
                 navBtn: [{
                     title: "去登录，查看更多",
                     subTitle: "",
-                    url: "https://moment.hahaha.cc/auth"
+                    url: "https://api.hanyu.me/moment/auth"
                 }]
             }
         }
