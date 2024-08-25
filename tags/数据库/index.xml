@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>数据库 on 好事发生</title>
-    <link>https://blog.hahaha.cc/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <link>https://blog.hanyu.me/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
     <description>Recent content in 数据库 on 好事发生</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 04 Jul 2024 17:51:21 +0800</lastBuildDate>
-    <atom:link href="https://blog.hahaha.cc/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hanyu.me/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>要使用业务唯一ID做主键吗？</title>
-      <link>https://blog.hahaha.cc/posts/tech/4/</link>
+      <link>https://blog.hanyu.me/posts/tech/4/</link>
       <pubDate>Thu, 04 Jul 2024 17:51:21 +0800</pubDate>
-      <guid>https://blog.hahaha.cc/posts/tech/4/</guid>
+      <guid>https://blog.hanyu.me/posts/tech/4/</guid>
       <description>注意： 本篇文章需阅读者掌握MySQL索引基本原理，可提前阅读 MySQL系列 | 浅尝MySQL索引 本篇文章涉及的V2帖子，没有特殊能力者，是访问不通的 本人无特殊能力去看V2帖子，是不小心在某个地方看到，已全然忘记出</description>
     </item>
   </channel>
