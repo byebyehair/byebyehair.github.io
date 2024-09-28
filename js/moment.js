@@ -40,7 +40,7 @@ const app = createApp({
     },
     methods: {
         tags(obj) {
-            return tagHandle(obj);
+            // return tagHandle(obj);
         },
         imgClassHanle(obj) {
             return (obj.resourceList != undefined ? obj.resourceList.length: 0) == 1 ? 'single-pic': 'pic';

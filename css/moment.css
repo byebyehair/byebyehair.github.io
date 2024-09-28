@@ -17,6 +17,79 @@ a video {
     vertical-align:bottom;
 }
 
+
+#app a {
+/*  text-decoration: none;
+  letter-spacing: 1px;
+  color: #e42b2b;*/
+
+  color: var(--primary-color);
+  text-underline-offset: 4px;
+    cursor: pointer;
+/*  font-weight: bold;*/
+}
+
+#app blockquote {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+/*  margin: 2.5em 0;*/
+margin: 0.5em 0;
+  padding: 0 0 0 50px;
+  font-style: italic;
+  color: #555555;
+  border-left: none;
+}
+
+#app blockquote:before {
+  content: '“';
+  display: block;
+  font-family: times, sans-serif;
+  font-style: normal;
+  font-size: 48px;
+  color: #444444;
+  font-weight: bold;
+  line-height: 30px;
+  margin-left: -50px;
+  position: absolute;
+}
+
+#app  strong,
+#app  b,
+#app  em {
+/*  padding: 1px 2px;
+  background-color: #fcfcf0;
+  font-weight: normal;*/
+
+  margin: 0 -0.4em;
+  padding: 0 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: 0 0;
+  /* background-image: linear-gradient(to right, #ffb4b44c, rgb(255 122 122 / 10%)); */
+  background-image: linear-gradient(to right, #7aa8744c, rgba(122, 168, 116, 0.1));
+  /* background-image: linear-gradient(to right, rgba(255, 225, 0, .1), rgba(255, 225, 0, .7) 4%, rgba(255, 225, 0, .3)); */
+  -webkit-box-decoration-break: clone;
+
+}
+
+.loadbtn {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255,100%);
+    border-color:hsl(240 6% 90% / 1);
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000 , 0 0 #0000, 0 1px 2px 0 rgba(0, 0, 0, .05);
+    border: 1px solid hsl(240 6% 90% / 1);
+    cursor: pointer;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    font-size: 14px;
+}
+
+.loadbtn:hover{
+    background-color: hsl(0 0% 95% / 1);
+}
+
 .single-pic {
     object-fit:cover;
     /* height:280px;
@@ -58,9 +131,6 @@ a video {
         width:100px;
         border-radius:4px;
     }
-    .loadbtn {
-        border-radius:0px;
-    }
 
     #app {
         border-radius:0px;
@@ -81,9 +151,7 @@ a video {
         width:220px;
         border-radius:4px;
     }
-    .loadbtn {
-        border-radius:0px;
-    }
+
     #app {
     /*    border-radius:0px;*/
         border-radius:  0.5rem 0.5rem 0.5rem 0.5rem;;
@@ -103,9 +171,6 @@ a video {
         height:250px;
         width:250px;
         border-radius:4px;
-    }
-    .loadbtn {
-        border-radius:0px;
     }
    
     #app {
