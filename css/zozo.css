@@ -437,6 +437,7 @@ a[target="_blank"] {
 
 .list_with_title .listing .listing_post .post_time {
   float: right;
+  text-align: right;
   color: #c5c5c5;
   font-size: 14px;
   width: 110px;
