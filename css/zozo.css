@@ -426,17 +426,20 @@ a[target="_blank"] {
 
 .list_with_title .listing .listing_post {
   padding-bottom: 5px;
+  display: flex;
 }
 
 .list_with_title .listing .listing_post a {
-  display: inline-block;
-  width: 85%;
+/*  display: inline-block;
+  width: 85%;*/
+  width: calc(100% - 110px);
 }
 
 .list_with_title .listing .listing_post .post_time {
   float: right;
   color: #c5c5c5;
   font-size: 14px;
+  width: 110px;
 }
 
 .list_with_title .listing .listing_post a:hover {

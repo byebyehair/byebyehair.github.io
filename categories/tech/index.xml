@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>技术 on 好事发生</title>
-    <link>https://blog.hanyu.me/categories/%E6%8A%80%E6%9C%AF/</link>
-    <description>Recent content in 技术 on 好事发生</description>
+    <title>Tech on 好事发生</title>
+    <link>https://blog.hanyu.me/categories/tech/</link>
+    <description>Recent content in Tech on 好事发生</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 04 Jul 2024 17:51:21 +0800</lastBuildDate>
-    <atom:link href="https://blog.hanyu.me/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hanyu.me/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>要使用业务唯一ID做主键吗？</title>
       <link>https://blog.hanyu.me/posts/tech/4/</link>

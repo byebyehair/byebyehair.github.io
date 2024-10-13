@@ -14,6 +14,9 @@
     <loc>https://blog.hanyu.me/posts/life/</loc>
     <lastmod>2024-07-22T07:18:00+08:00</lastmod>
   </url><url>
+    <loc>https://blog.hanyu.me/categories/life/</loc>
+    <lastmod>2024-07-22T07:18:00+08:00</lastmod>
+  </url><url>
     <loc>https://blog.hanyu.me/posts/</loc>
     <lastmod>2024-07-22T07:18:00+08:00</lastmod>
   </url><url>
@@ -21,9 +24,6 @@
     <lastmod>2024-07-22T07:18:00+08:00</lastmod>
   </url><url>
     <loc>https://blog.hanyu.me/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2024-07-22T07:18:00+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.hanyu.me/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2024-07-22T07:18:00+08:00</lastmod>
   </url><url>
     <loc>https://blog.hanyu.me/posts/life/33/</loc>
@@ -41,7 +41,7 @@
     <loc>https://blog.hanyu.me/posts/tech/</loc>
     <lastmod>2024-07-04T17:51:21+08:00</lastmod>
   </url><url>
-    <loc>https://blog.hanyu.me/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://blog.hanyu.me/categories/tech/</loc>
     <lastmod>2024-07-04T17:51:21+08:00</lastmod>
   </url><url>
     <loc>https://blog.hanyu.me/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
@@ -161,10 +161,10 @@
     <loc>https://blog.hanyu.me/posts/growing/</loc>
     <lastmod>2022-02-25T00:19:49+08:00</lastmod>
   </url><url>
-    <loc>https://blog.hanyu.me/posts/growing/1/</loc>
+    <loc>https://blog.hanyu.me/categories/work/</loc>
     <lastmod>2022-02-25T00:19:49+08:00</lastmod>
   </url><url>
-    <loc>https://blog.hanyu.me/categories/%E8%81%8C%E5%9C%BA/</loc>
+    <loc>https://blog.hanyu.me/posts/growing/1/</loc>
     <lastmod>2022-02-25T00:19:49+08:00</lastmod>
   </url><url>
     <loc>https://blog.hanyu.me/tags/%E9%9D%A2%E8%AF%95/</loc>
@@ -186,8 +186,6 @@
     <lastmod>2012-09-27T19:22:06+08:00</lastmod>
   </url><url>
     <loc>https://blog.hanyu.me/posts/hidden/</loc>
-  </url><url>
-    <loc>https://blog.hanyu.me/project/</loc>
   </url><url>
     <loc>https://blog.hanyu.me/moment/</loc>
   </url>

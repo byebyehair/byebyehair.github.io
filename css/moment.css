@@ -83,7 +83,7 @@ margin: 0.5em 0;
     transition-duration: .15s;
     padding-top: .3rem;
     padding-bottom: .3rem;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 a.loadbtn {
@@ -97,7 +97,7 @@ a.loadbtn {
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     transition-duration: .15s;
     padding: .3rem;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .loadbtn:hover{
