@@ -278,7 +278,10 @@ function addTargetBlankToExternalLinks() {
             // 检查链接的主机名是否与当前页面不同
             if (linkUrl.hostname !== currentHost) {
                 // 添加 target="_blank" 以在新标签页打开外部链接
-                link.target = '_blank';
+                // link.target = '_blank';
+                 if (!link.querySelector('img')) {
+                    link.target = '_blank';
+                 }
             }
         } catch (error) {
             // 如果 href 不是一个有效的 URL，则忽略它
