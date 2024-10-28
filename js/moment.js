@@ -35,10 +35,26 @@ const app = createApp({
     computed: {
         isMobile() {
             return window.innerWidth <= 768;
-        },
-
+        }
     },
     methods: {
+        // showshow(content, piclist,index) {
+        //     if (content.length * 28 / window.innerWidth > 4 || (piclist != undefined && piclist.length > 0) ){
+        //         return true
+        //     }
+        // },
+        // zhankai(event, index){
+        //     if (document.getElementById(index).style.maxHeight != 'none' && document.getElementById(index).style.maxHeight != ''){
+        //         document.getElementById(index).style.maxHeight = 'none';
+        //         // event.target.style.display = 'none';
+        //         event.target.innerText = "收起";
+        //     } else {
+        //         document.getElementById(index).style.maxHeight = '120px';
+        //          event.target.innerText = "展开";
+        //         // event.target.style.display = 'none';
+        //     }
+            
+        // },
         tags(obj) {
             // return tagHandle(obj);
         },

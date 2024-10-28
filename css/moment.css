@@ -72,7 +72,7 @@ margin: 0.5em 0;
 }
 
 .loadbtn {
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: rgba(255, 255, 255,100%);
     border-color:hsl(240 6% 90% / 1);
     box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000 , 0 0 #0000, 0 1px 2px 0 rgba(0, 0, 0, .05);
@@ -84,10 +84,11 @@ margin: 0.5em 0;
     padding-top: .3rem;
     padding-bottom: .3rem;
     font-size: 13px;
+    color: #646464;
 }
 
 a.loadbtn {
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: rgba(255, 255, 255,100%);
     border-color:hsl(240 6% 90% / 1);
     box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000 , 0 0 #0000, 0 1px 2px 0 rgba(0, 0, 0, .05);

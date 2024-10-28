@@ -93,29 +93,35 @@
                    
                     <div class="post_content markdown">
 
-                      <main id="app"  v-cloak style="margin-top:50px">
-                          <div v-for="obj in items">
-                            
-                            <div v-html="markedContent(obj.content)" class="text">
-                            </div>
-                            <div class="pic-group" style="display: flex;flex-wrap: wrap;align-content: center;">
-                                <div v-for="pic in obj.resourceList" class="pic-group-in">
-                                    <template v-if="pic.type.indexOf('image') != -1">
-                                      <a class="no-tag fancybox" rel="group" :href="pic.externalLink" :data-fancybox="'group'+obj.id" data-caption="">
-                                        <img :src="pic.externalLink + preAndSuf.remoteImgSuffix" :class="imgClassHanle(obj)"/>
-                                      </a>
-                                    </template>
+                      <main id="app"  v-cloak style="margin-top:50px;">
+                          <div v-for="(obj, index) in items">
 
-                                    <template v-if="pic.type.indexOf('video') != -1">
-                                      <a class="no-tag fancybox" rel="group" :href="pic.externalLink" :data-fancybox="'group'+obj.id"
-                                                        data-caption="">
-                                        <video preload="none" controls="controls" :src="pic.externalLink"
-                                        :class="imgClassHanle(obj)">
-                                        </video>
-                                      </a>
-                                    </template>
+                            
+
+                                <div v-html="markedContent(obj.content)" class="text" style="max-height:100%">
                                 </div>
-                            </div>
+
+                                <div class="pic-group" style="display: flex;flex-wrap: wrap;align-content: center;" v-if="obj.resourceList != undefined && obj.resourceList.length > 0 ">
+                                    <div v-for="pic in obj.resourceList" class="pic-group-in">
+                                        <template v-if="pic.type.indexOf('image') != -1">
+                                          <a class="no-tag fancybox" rel="group" :href="pic.externalLink" :data-fancybox="'group'+obj.id" data-caption="">
+                                            <img :src="pic.externalLink + preAndSuf.remoteImgSuffix" :class="imgClassHanle(obj)"/>
+                                          </a>
+                                        </template>
+
+                                        <template v-if="pic.type.indexOf('video') != -1">
+                                          <a class="no-tag fancybox" rel="group" :href="pic.externalLink" :data-fancybox="'group'+obj.id"
+                                                            data-caption="">
+                                            <video preload="none" controls="controls" :src="pic.externalLink"
+                                            :class="imgClassHanle(obj)">
+                                            </video>
+                                          </a>
+                                        </template>
+                                    </div>
+                                </div>
+                            
+
+                            
 
                             <div style="text-align: right;font-size: 12px;">
                               {[ formatDate(obj.createdTs) ]}
