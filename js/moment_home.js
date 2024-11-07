@@ -1,5 +1,5 @@
 var offset = 0;
-var limit = 3;
+var limit = 1;
 // var server = "https://api/v1/memo";
 var server = "https://api.hanyu.me/moment/";
 
