@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Damon" />
+	
+	
+	
+	<title>漫谈高并发之指标篇 ｜ 好事发生</title>
+	
+    
+    
+    <meta name="description" content="前言 注销了之前有505个订阅者和5篇原创技术文章的公众号，重新创建了现在的号。
+主要原因有两个，一是之前的名字不符合心意，今年也无法改名了，另外是想清空自己，重新开始。虽然有些不舍，但终究要和过去告别。
+当然，按照我的一贯风格，继续秉持不标题党、不废话、不套路的 “三不”原则。
+" />
+    
+
+    
+    
+    <meta name="keywords" content="好事发生, hanyu, damon" />
+    
+
+	
+    
+    <link rel="shortcut icon" href="https://storage.hanyu.me/resource/img/icon/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="https://blog.hanyu.me/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://blog.hanyu.me/css/zozo.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="https://blog.hanyu.me/css/highlight.css" />
+
+    
+    
+</head>
+
+<body>
+    <div class="main animate__animated animate__fadeInDown">
+        <div class="nav_container animated fadeInDown">
+    <div class="site_nav" id="site_nav">
+        <ul>
+            
+            <li>
+                <a href="/">首页</a>
+            </li>
+            
+            <li>
+                <a href="/moment/">片刻</a>
+            </li>
+            
+            <li>
+                <a href="/posts/">文章</a>
+            </li>
+            
+            <li>
+                <a href="/tags/">标签</a>
+            </li>
+            
+            <li>
+                <a href="/about/">关于</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="menu_icon">
+        <a id="menu_icon"><i class="ri-menu-line"></i></a>
+    </div>
+</div>
+        <div class="header animated fadeInDown">
+    <div class="site_title_container">
+        <div class="site_title">
+            <h1>
+                <a href="https://blog.hanyu.me/">
+                    <span>好事发生</span>
+                </a>
+            </h1>
+        </div>
+        <div class="description">
+            <p class="sub_title">愿我们都好事发生</p>
+            <div class="my_socials">
+                
+                <a href="https://blog.hanyu.me/index.xml" type="application/rss+xml" title="rss" target="_blank"><i
+                        class="ri-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="content">
+            <div class="post_page">
+                <div class="post animate__animated animate__fadeInDown">
+                    <div class="post_title post_detail_title">
+                        <h2><a href='/posts/tech/5/'>漫谈高并发之指标篇</a></h2>
+                        <span class="date">2024.10.20</span>
+                    </div>
+                    
+                    
+                    <div>
+
+<aside style="line-height: 1.2rem;font-size: 0.8rem;">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#度量指标">度量指标</a>
+      <ul>
+        <li><a href="#性能相关指标">性能相关指标</a></li>
+        <li><a href="#可用性相关指标">可用性相关指标</a></li>
+      </ul>
+    </li>
+    <li><a href="#总结">总结</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</aside>
+</div>
+                    <div class="post_content markdown"><h2 id="前言">前言</h2>
+<p>注销了之前有505个订阅者和5篇原创技术文章的公众号，重新创建了现在的号。</p>
+<p>主要原因有两个，一是之前的名字不符合心意，今年也无法改名了，另外是想清空自己，重新开始。虽然有些不舍，但终究要和过去告别。</p>
+<p>当然，按照我的一贯风格，继续秉持不标题党、不废话、不套路的 “三不”原则。</p>
+<h2 id="度量指标">度量指标</h2>
+<p>我发现，很多人在工作或者面试交流中，都在提及三高即高并发、高性能、高可用，但却连基本的度量指标都混淆了，会导致一些问题，比如：</p>
+<ul>
+<li>在工作中，没有了解清楚度量指标，要进行性能调优或压测时，很难明确要在什么样的限定条件下，将哪些指标进行提升，也没法和别人统一口径，甚至可能出现理解偏差，导致无法落地；</li>
+<li>在面试中，面试官很可能会对你的性能优化相关的回答产生怀疑，因为你连基本的度量指标都没搞清楚，何谈性能优化、可用性提升呢？</li>
+</ul>
+<p>只有清楚度量指标，设定目标，慢慢地去迭代调优完善，才能成为公认的三高系统。</p>
+<p><strong>所以，本篇不谈具体优化，先陪你认识度量指标。</strong></p>
+<h3 id="性能相关指标">性能相关指标</h3>
+<p>我们先来看看性能强相关的度量。</p>
+<p>如果有人问你，你的XX服务性能如何，经常会听到有人回答：“我的服务性能很高，可以支撑10万QPS”，又或者说，“我的服务性能很高，RT在50ms”。</p>
+<p><strong>这样的回答，是信息缺失的。</strong></p>
+<p>高并发系统常见的性能强相关的度量指标如下：</p>
+<ul>
+<li>并发数 Concurrency</li>
+<li>延迟即响应时间 Latency（单位/ms）</li>
+<li>吞吐量 Throughput（单位/QPS、TPS）</li>
+</ul>
+<p>这里面，响应时间主要用来形容性能，并发数主要是形容系统的并行处理能力，吞吐主要用来形容单位时间内系统所能处理的任务量，它们之间，相辅相成。</p>
+<h4 id="并发数">并发数</h4>
+<p>并发数通常指的是系统在同一时刻正在处理的请求数量，包括正在执行和等待执行的请求。</p>
+<p>并发指的是多个任务能够在某个时间区间内，“同时”执行，但它并不是真正的“同时”，假设拿 1 秒作为单位时间，宏观上看，1 个CPU 1 秒内确实完成了多个任务处理，看起来很“同时”的样子，但从微观角度，任务是由CPU通过更细粒度的毫秒、纳秒等时间片轮转或争抢交替执行的。</p>
+<p>并发这个概念现在被泛化，所以高并发指的就是，短时间内处理大量的请求的场景，要想做出支持高并发的系统，就需要朝着高性能、高可用、可扩展这三个目标努力。</p>
+<p>为什么不叫高并行系统呢？因为并行指的是多个任务真正意义上的在同一时刻执行，如果想要支持高并行，就要求有超多个CPU核心和更强悍的硬件体系来支持。</p>
+<p>从服务端的角度来看，系统的并发能力取决于容器线程数和工作线程数。</p>
+<p>设计高并发系统的第一步，就是要先定义出目标，要知道用什么样的度量指标将目标量化。</p>
+<h4 id="延迟">延迟</h4>
+<p>先来看看延迟，延迟一般用响应时间RT来表示，常见的单位是毫秒(ms)，响应时间是衡量系统性能的最关键指标之一，它的数值大小直接反映了系统的快慢。</p>
+<p>一般指的是从用户发起请求到系统完成任务并返回结果所经历的时间。有平均响应时间、最大响应时间等统计值，但是单次的响应时间是基本没有参考意义，我们需要通过压测或者线上实际情况，统计一段时间内的数据。</p>
+<p>真正系统在运行中，很有可能发生抖动，这种抖动可能是GC引起的，也可能是网络抖动等各种异常引起的，用户访问量大的时候，任何抖动都可能会导致最大响应时间变得非常大，最大响应时间这个指标不可控，这种偶尔发生的极端值也可能会极大地影响平均数，所以一般平均响应时间、最大响应时间我们都不用。</p>
+<p>我们通常使用分位值 TP95 或 TP99 来表示 95% 或 99% 的请求响应时间位于某个值之下，即将响应时间从小到大排列，顺序处于 95% 位置的值即为 TP95 值，同理，也有 999线 等。</p>
+
+
+
+
+    <a class="imgshow" data-fancybox="gallery" href="https://storage.hanyu.me/files/blog/tech/5/img/1.png?imageMogr2/rquality/70" data-caption="" style="text-align: center;">
+    
+        <img src="https://storage.hanyu.me/files/blog/tech/5/img/1.png?q=80" style="max-width: 100%;height: 100%;object-fit: cover;" />
+         
+    </a>
+
+<h4 id="吞吐量">吞吐量</h4>
+<p>吞吐量是指系统在单位时间内能够处理的任务数量，一般我们用QPS(每秒查询数)或者TPS(每秒事务数)来表示。</p>
+<p>系统的吞吐量直接决定了它能够应对多少并发请求，因此是评估系统是否能支撑高并发的关键指标。</p>
+<p>之前看过一些文章资料，说古早时期QPS是用来描述SQL每秒执行数的，包括增删改查所有DML语句，不过现在更常用于描述API接口的查询吞吐。</p>
+<p>我们先来看看TPS，TPS代表的是每秒事务数，但TPS在不同的业务中，定义的粒度是不同的，所以TPS，是一种定义的口径，只要和你交流的人，口径一致即可。</p>
+<p>例如，如果是接口级性能测试，比如扣减库存接口，T 就代表完成这个扣减算作一次事务。</p>
+<p>如果是业务级，比如下单要完成库存、优惠券、支付三个接口调用才算做完成一个业务流程，那么 T 就代表用户完成三次接口调用下单成功算作一次事务。</p>
+<p>所以，在不同的口径中，TPS的具体定义可能有所不同。</p>
+<p>另外，我们经常看到有些文章中说：</p>
+<blockquote>
+<p>QPS vs TPS：QPS基本类似于TPS，但是不同的是，对于一个页面的一次访问，形成一个TPS；但一次页面请求，可能产生多次对服务器的请求，服务器对这些请求，就可计入“QPS”之中。如，访问一个页面会请求服务器2次，一次访问，产生一个“T”，产生2个“Q”。</p>
+</blockquote>
+<p>以上这段引用，可以说对，也可以说不对，原因请参考我前面讲的。</p>
+<p>如果觉得过于复杂，在绝大多数场景下，也可以简单理解为，QPS通常用于衡量只读API接口的性能，而TPS用于复杂的读写事务。</p>
+<h4 id="关系">关系</h4>
+<p>吞吐量、延迟、并发数之间的关系：</p>
+<p><strong>吞吐量 =  并发数 / 响应时间</strong></p>
+<p>并发不变，单个请求的响应时间减少，吞吐变大。</p>
+<p>比如，系统有200个线程在并发执行，TP99响应时间是50ms，刨除其他的干扰因素外，理论上系统的吞吐量能达到 200 / 0.05 = 4000 (TPS)，但这只是理论结果。</p>
+<blockquote>
+<p>小知识：另外，业内的高楼前辈，也曾清晰的描述过（这里的事务就是按照前面说的，三种口径，请求级如一次http请求，业务级如完成一次选品、下单，用户级如登录、选品、下单、退出）</p>
+<p>在线用户数和压力线程之间的关系：<br>
+· 用请求级 TPS 计算： <br>
+压力线程 = 峰值采样时间段(在线用户数 × 单用户请求数) ÷ 一个压力线程的请求级TPS</p>
+<p>用单业务操作级 TPS 计算：<br>
+压力线程 = 峰值采样时间段(在线用户数 × 单用户业务操作数) ÷ 一个压力线程的业务操作级TPS</p>
+<p>用户级 TPS 计算：<br>
+压力线程 = 峰值采样时间段(在线用户数 × 单用户完整业务数(也就是1) ÷ 一个压力线程的用户级TPS</p>
+<p>并发用户数的计算：<br>
+并发用户数 = 在线用户数 × 无停顿时间的单线程TPS有停顿时间的单线程TPS</p>
+<p>并发度：<br>
+并发度 = 在线用户并发用户 × 100%（取值要在同一时间段）</p>
+</blockquote>
+<h3 id="可用性相关指标">可用性相关指标</h3>
+<p>再来看看可用性相关的度量。 <br>
+高可用性（High Availability）是指通过设计减少系统不能提供服务的时间，系统具备较高的无故障运行的能力。</p>
+<p>其实对于用户来说，可用性要比性能更重要，性能差些系统起码还能勉强使用，可用性如果不达标，用户在故障期间是完全无法使用的。</p>
+<p>高并发系统常见的可用性相关的度量指标如下：</p>
+<ul>
+<li>平均无故障时间或平均故障间隔（MTBF）</li>
+<li>平均维修时间或平均故障时间（MTTR）</li>
+</ul>
+<p>这些指标可以评估系统的可靠性和恢复能力。</p>
+<h4 id="mtbf">MTBF</h4>
+<p>MTBF 代表两次故障的间隔时间，其实就是系统正常运转的平均时间，这个时间越长，代表系统稳定性越高。</p>
+<h4 id="mttr">MTTR</h4>
+<p>MTTR（Mean Time To Repair）表示故障的平均恢复时间，即平均故障时间。这个值越小，故障对于用户的影响越小。</p>
+<h4 id="可用性表示">可用性表示</h4>
+<p>Availability可用性 = MTBF系统正常运行时间 / (MTBF系统正常运行时间 + MTTR平均故障时间)</p>
+<p>所以我们使用正常运行所占的时间百分比形式表示可用性。</p>
+<p>一般4个9的可用性（99.99%）就可以相对称为高可用，不过像一些大厂的核心P0级服务，甚至可能需要8个9、9个9 才能称为高可用。</p>
+<p>到4个9的可用性下，可能需要建立完善的运维值班体系、故障处理流程、业务变更流程、故障排查工具等。</p>
+<p>五个九之后考察的是系统的容灾和自动恢复的能力，让自动化来处理故障，靠人基本很难做到的。</p>
+<p>一般来说，P0核心服务的可用性，要达到四个九，非核心服务的可用性起码要做到三个九。</p>
+
+
+
+
+    <a class="imgshow" data-fancybox="gallery" href="https://storage.hanyu.me/files/blog/tech/5/img/2.png?imageMogr2/rquality/70" data-caption="" style="text-align: center;">
+    
+        <img src="https://storage.hanyu.me/files/blog/tech/5/img/2.png?q=80" style="max-width: 100%;height: 100%;object-fit: cover;" />
+         
+    </a>
+
+<h2 id="总结">总结</h2>
+<p>在这里，我来解答前面留下的问题。</p>
+<p>如果有人问你，你的XX服务性能如何，你可以按照如下的方式回答，例如：</p>
+<p><strong>以完成一次接口请求为一个事务T，在一台配置为4核8GB内存的机器上，并发数为100时，系统能够达到2000TPS的吞吐量，TP99不超过50ms。</strong></p>
+<p>所以，高并发系统设计的目标就是最大限度地利用服务器硬件资源，提升资源利用率，减少响应时间，提高吞吐量和并发数，尽可能减少故障时间。</p>
+<hr>
+<h6 id="一起交流">一起交流</h6>
+<p>个人网站：<br>
+hanyu.me</p>
+<!--
+微信与群：  
+关注公众号，发送“微信”，即可 --> </div>
+                    
+                    <div class="post_footer">
+                        
+                        <div class="meta">
+                            <div class="info">
+                                <span class="field tags">
+                                    <i class="ri-stack-line"></i>
+                                    
+                                    <a href="https://blog.hanyu.me/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/">高并发</a>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+
+
+
+<div class="doc_comments discussion">
+  <script src="https://giscus.app/client.js" data-repo="byebyehair/blog" data-repo-id="R_kgDOMYilrw"
+    data-category="Announcements" data-category-id="DIC_kwDOMYilr84ChCbQ" data-mapping="pathname" data-strict="0"
+    data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light_high_contrast"
+    data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async></script>
+</div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <a id="back_to_top" href="#" class="back_to_top"><i class="ri-arrow-up-s-line"></i></a>
+    <footer class="footer">
+    <div class="powered_by">
+    </div>
+
+  
+</footer>
+
+    <script src="https://blog.hanyu.me/js/jquery-3.5.1.min.js"></script>
+<link href="https://blog.hanyu.me/css/fancybox.min.css" rel="stylesheet">
+<script src="https://blog.hanyu.me/js/fancybox.min.js"></script>
+<script src="https://blog.hanyu.me/js/zozo.js"></script>
+
+
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
+
+
+
+</body>
+
+</html>
