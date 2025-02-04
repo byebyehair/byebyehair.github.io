@@ -56,7 +56,7 @@ const app = createApp({
             
         // },
         tags(obj) {
-            // return tagHandle(obj);
+            return tagHandle(obj);
         },
         imgClassHanle(obj) {
             return (obj.resourceList != undefined ? obj.resourceList.length: 0) == 1 ? 'single-pic': 'pic';
@@ -83,13 +83,31 @@ const app = createApp({
         },
         markedContent(content){
             return marked.parse(content)
-        }
+        },
+         toggleContent: function(e) {
+            const index = e;
+            const posts = this.items;
+            posts[index].showFullContent = !posts[index].showFullContent;
+            this.setData({
+              items: posts
+            });
+          }
+
     },
     mounted: function() {
         this.button.loadbtn.text = "耐心等待，正在加载，有些缓慢...";
         const that = this;
         gets(that,
         function(data) {
+            for (var i = data.length - 1; i >= 0; i--) {
+                 data[i] = that.tags(data[i]);
+                 data[i].content = that.markedContent(data[i].content);
+                 if (data[i].content.length > 100){
+                    data[i].showFullContent = false;
+                  } else {
+                    data[i].showFullContent = true;
+                  }
+            }
             that.items.push(...data);
             that.button.loadbtn.loadmore = true;
             that.button.loadbtn.text = "点击加载更多";
@@ -243,8 +261,8 @@ function tagHandle(obj) {
         obj["tags"] = tags;
     }
 
-    content = marked(content);
-    content = content.replace("\n", "<p></p>");
+    // content = marked(content);
+    // content = content.replace("\n", "<p></p>");
     obj.content = content;
     return obj;
 }

@@ -258,8 +258,7 @@ Redis中提供了SetNX+Expire两个命令，可以对指定的Key加锁：</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div><blockquote>
-<p>原子性问题</p>
-</blockquote>
+<p>原子性问题</p></blockquote>
 <p>以上代码存在一个问题，假设</p>
 <ul>
 <li>1.）A线程获取锁成功</li>
@@ -292,8 +291,7 @@ Redis中提供了SetNX+Expire两个命令，可以对指定的Key加锁：</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="w"> </span><span class="n">redisTemplate</span><span class="p">.</span><span class="na">execute</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">DefaultRedisScript</span><span class="p">(</span><span class="n">LUA_SCRIPT</span><span class="p">),</span><span class="w"> </span><span class="n">keys</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div><blockquote>
-<p>超时&amp;误删锁问题</p>
-</blockquote>
+<p>超时&amp;误删锁问题</p></blockquote>
 <p>虽然我们优化了，但还是有BUG，假设现在A 和 B 两个线程同时访问以上代码：</p>
 <ul>
 <li>1.）A先获得锁</li>
@@ -382,8 +380,7 @@ Redis中提供了SetNX+Expire两个命令，可以对指定的Key加锁：</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="p">)</span><span class="w"> </span><span class="n">redisTemplate</span><span class="p">.</span><span class="na">execute</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">DefaultRedisScript</span><span class="p">(</span><span class="n">LUA_SCRIPT</span><span class="p">),</span><span class="w"> </span><span class="n">keys</span><span class="p">);</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div><blockquote>
-<p>Redisson</p>
-</blockquote>
+<p>Redisson</p></blockquote>
 <p>对于锁超时问题，我们还可以使用现成的工具Redisson，Redisson提供了WatchDog（看门狗）机制，内置了锁续命机制，无需手动实现。</p>
 <!--![DBLOCK](img/redisson.png)-->
 
@@ -420,8 +417,7 @@ Redis中提供了SetNX+Expire两个命令，可以对指定的Key加锁：</p>
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">rLock</span><span class="p">.</span><span class="na">unlock</span><span class="p">();</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div><blockquote>
-<p>主从数据一致性问题</p>
-</blockquote>
+<p>主从数据一致性问题</p></blockquote>
 <p>不过此时还可能出现一种意外情况，假设Redis主从环境：</p>
 <ul>
 <li>
@@ -474,8 +470,7 @@ RedLock的方式也有缺点，因为需要对多个节点操作加锁解锁，�
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">redLock</span><span class="p">.</span><span class="na">unlock</span><span class="p">();</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div><blockquote>
-<p>事务问题</p>
-</blockquote>
+<p>事务问题</p></blockquote>
 <p>至此，是不是万无一失了呢？其实还没完，还有一个隐藏问题。<br>
 我们知道，MySQL默认的事务隔离级别是Repeatable-Read可重复读。</p>
 <!--![DBLOCK](img/mysql_t.png)-->
@@ -528,8 +523,7 @@ RedLock的方式也有缺点，因为需要对多个节点操作加锁解锁，�
 其实没有最完美无缺的方案，以上方案还是会存在某些特定场景下的特定问题，具体场景具体分析，逐步优化，一步步思考，加固项目城墙之余，也夯实自身的技术壁垒。</p>
 <blockquote>
 <p>辛苦移步微信公众号点赞、在看、关注：
-<a href="https://mp.weixin.qq.com/s/82S1AbBeJzYuGhl6FvjQcg">Redis系列 | 分布式锁-电商防超卖的N+1个坑！</a></p>
-</blockquote>
+<a href="https://mp.weixin.qq.com/s/82S1AbBeJzYuGhl6FvjQcg">Redis系列 | 分布式锁-电商防超卖的N+1个坑！</a></p></blockquote>
 </div>
                     
                     <div class="post_footer">

@@ -98,8 +98,21 @@
                           <div v-for="(obj, index) in items">
 
                             
-
-                                <div v-html="markedContent(obj.content)" class="text" style="max-height:100%">
+                                <div v-for="tag in obj.tags" style="width: 60px !important;height: 23px;
+  text-align: center;
+   color: rgb(76, 143, 133); 
+  color: rgba(121, 160, 153, 0.6);
+  background-color: rgba(234, 243, 241, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  /* border: 1px rgb(55,133,122) solid; */
+   border:   1px rgba(116, 150, 144, 0.6) solid; 
+  font-size: 10px;
+  padding: 0px;
+  overflow: hidden;margin-bottom:12px">{[ tag ]}</div>
+                                <div v-html="obj.showFullContent ? obj.content : obj.content.slice(0, 100)+'......'" class="text" style="max-height:100%">
                                 </div>
 
                                 <div class="pic-group" style="display: flex;flex-wrap: wrap;align-content: center;" v-if="obj.resourceList != undefined && obj.resourceList.length > 0 ">
@@ -123,6 +136,8 @@
                             
 
                             
+
+                            <button style="margin-top:5px;border-radius: 5px;" class="m-loadbtn" v-if="!obj.showFullContent" @click="toggleContent(index)" :data-index="index">展开</button>
 
                             <div style="text-align: right;font-size: 12px;">
                               {[ formatDate(obj.createdTs) ]}
