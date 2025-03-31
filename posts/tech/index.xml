@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tech on 好事发生</title>
-    <link>https://blog.hanyu.me/posts/tech/</link>
+    <link>https://blog.hahaha.net/posts/tech/</link>
     <description>Recent content in tech on 好事发生</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 20 Oct 2024 08:00:00 +0800</lastBuildDate>
-    <atom:link href="https://blog.hanyu.me/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hahaha.net/posts/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>漫谈高并发之指标篇</title>
-      <link>https://blog.hanyu.me/posts/tech/5/</link>
+      <link>https://blog.hahaha.net/posts/tech/5/</link>
       <pubDate>Sun, 20 Oct 2024 08:00:00 +0800</pubDate>
-      <guid>https://blog.hanyu.me/posts/tech/5/</guid>
+      <guid>https://blog.hahaha.net/posts/tech/5/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;注销了之前有505个订阅者和5篇原创技术文章的公众号，重新创建了现在的号。&lt;/p&gt;&#xA;&lt;p&gt;主要原因有两个，一是之前的名字不符合心意，今年也无法改名了，另外是想清空自己，重新开始。虽然有些不舍，但终究要和过去告别。&lt;/p&gt;&#xA;&lt;p&gt;当然，按照我的一贯风格，继续秉持不标题党、不废话、不套路的 “三不”原则。&lt;/p&gt;</description>
     </item>
     <item>
       <title>要使用业务唯一ID做主键吗？</title>
-      <link>https://blog.hanyu.me/posts/tech/4/</link>
+      <link>https://blog.hahaha.net/posts/tech/4/</link>
       <pubDate>Thu, 04 Jul 2024 17:51:21 +0800</pubDate>
-      <guid>https://blog.hanyu.me/posts/tech/4/</guid>
+      <guid>https://blog.hahaha.net/posts/tech/4/</guid>
       <description>&lt;p&gt;注意：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;本篇文章需阅读者掌握MySQL索引基本原理，可提前阅读  &lt;a href=&#34;https://mp.weixin.qq.com/s/5UbmpnxmIV9ZDnAF9KaYdg&#34;&gt;MySQL系列 | 浅尝MySQL索引&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;本篇文章涉及的V2帖子，没有特殊能力者，是访问不通的&lt;/li&gt;&#xA;&lt;li&gt;本人无特殊能力去看V2帖子，是不小心在某个地方看到，已全然忘记出处，是一位遵纪守法的好公民&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;看到V2一篇帖子中的提问：&lt;a href=&#34;https://go.seeyou.me/sk7qf&#34;&gt;https://go.seeyou.me/sk7qf&lt;/a&gt; ，促使我写下了这篇文章。&lt;/p&gt;</description>
     </item>
     <item>
       <title>高并发短链系统设计</title>
-      <link>https://blog.hanyu.me/posts/tech/3/</link>
+      <link>https://blog.hahaha.net/posts/tech/3/</link>
       <pubDate>Thu, 04 May 2023 10:01:22 +0800</pubDate>
-      <guid>https://blog.hanyu.me/posts/tech/3/</guid>
+      <guid>https://blog.hahaha.net/posts/tech/3/</guid>
       <description>&lt;p&gt;&lt;strong&gt;原则与底线：不说废话、不凑字数、不标题党。&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;&#xA;&lt;h3 id=&#34;什么是短链&#34;&gt;什么是短链&lt;/h3&gt;&#xA;&lt;p&gt;一个长的网址链接，转换为一个短的网址链接。&lt;br&gt;&#xA;比如我发微博内容带有 &lt;a href=&#34;https://blog.hanyu.cool/about/&#34;&gt;https://blog.hanyu.cool/about/&lt;/a&gt; 链接时，链接会自动转换成 &lt;a href=&#34;https://t.cn/A6NlWmYi&#34;&gt;https://t.cn/A6NlWmYi&lt;/a&gt; 这样的短网址。&lt;/p&gt;&#xA;&lt;p&gt;微博的短网址域名为：t.cn，腾讯的短网址域名为 url.cn，阅读本文后，就可以自己实现一个高性能短链服务。&lt;/p&gt;</description>
     </item>
     <item>
       <title>浅尝MySQL索引</title>
-      <link>https://blog.hanyu.me/posts/tech/2/</link>
+      <link>https://blog.hahaha.net/posts/tech/2/</link>
       <pubDate>Wed, 09 Feb 2022 17:28:32 +0800</pubDate>
-      <guid>https://blog.hanyu.me/posts/tech/2/</guid>
+      <guid>https://blog.hahaha.net/posts/tech/2/</guid>
       <description>&lt;h2 id=&#34;写在前面的废话&#34;&gt;写在前面的废话&lt;/h2&gt;&#xA;&lt;p&gt;Hello，大家好，我是Damon，一年前我写了一篇文章，然后拖更至今。&#xA;这其中有自己懒惰、工作变动等因素，年前这段时间一直在求职面试，拿到了些一线大厂和一些独角兽的offer。这段时间面试的经验和学习的过程对我自己帮助很大，面经还在整理中，后续会发出来给大家做一个参考吧。&lt;br&gt;&#xA;因为每家公司的面试官不同，出题也是千遍万化，所以有些基础的核心知识，必须要体系化的学习，今天写这篇MySQL索引相关的知识也都是面试必问，后面我也会把一些锁、事务等等相关知识点写出来。&lt;br&gt;&#xA;从今天开始，也会持续更新啦。虽然这篇文章很八股很基础，但总要一点点来，不积跬步无以至千里。如果觉得西瓜不错，可以点击关注哦。&lt;/p&gt;</description>
     </item>
     <item>
       <title>分布式锁之电商防超卖的N&#43;1个坑</title>
-      <link>https://blog.hanyu.me/posts/tech/1/</link>
+      <link>https://blog.hahaha.net/posts/tech/1/</link>
       <pubDate>Tue, 23 Mar 2021 22:40:49 +0800</pubDate>
-      <guid>https://blog.hanyu.me/posts/tech/1/</guid>
-      <description>&lt;p&gt;大家好，我是Damon。&lt;br&gt;&#xA;今天和同事讨论库存防超卖问题，发现虽然只是简单的库存扣减场景，却隐藏着很多坑，一不小心就容易翻车，让我来填平这些坑。&lt;/p&gt;&#xA;&lt;h2 id=&#34;单实例环境&#34;&gt;单实例环境&lt;/h2&gt;&#xA;&lt;p&gt;一般电商体系防止库存超卖，主要有以下几种方式：&lt;/p&gt;&#xA;&lt;!--![导图](img/oversold.png)--&gt;&#xA;&#xA;&#xA;&#xA;&#xA;    &lt;a class=&#34;imgshow&#34; data-fancybox=&#34;gallery&#34; href=&#34;https://storage.hanyu.me/files/blog/tech/1/img/oversold.png?imageMogr2/rquality/70&#34; data-caption=&#34;&#34; style=&#34;text-align: center;&#34;&gt;&#xA;    &#xA;        &lt;img src=&#34;https://storage.hanyu.me/files/blog/tech/1/img/oversold.png?q=80&#34; style=&#34;max-width: 100%;height: 100%;object-fit: cover;&#34; /&gt;&#xA;         &#xA;    &lt;/a&gt;&#xA;&#xA;&lt;p&gt;防止库存超卖，最先想到的可能就是「锁」，如果是一些单实例部署的库存服务，大部分情况下我们可以使用以下锁或并发工具类：&lt;/p&gt;</description>
+      <guid>https://blog.hahaha.net/posts/tech/1/</guid>
+      <description>&lt;p&gt;大家好，我是Damon。&lt;br&gt;&#xA;今天和同事讨论库存防超卖问题，发现虽然只是简单的库存扣减场景，却隐藏着很多坑，一不小心就容易翻车，让我来填平这些坑。&lt;/p&gt;&#xA;&lt;h2 id=&#34;单实例环境&#34;&gt;单实例环境&lt;/h2&gt;&#xA;&lt;p&gt;一般电商体系防止库存超卖，主要有以下几种方式：&lt;/p&gt;&#xA;&lt;!--![导图](img/oversold.png)--&gt;&#xA;&#xA;&#xA;&#xA;&#xA;    &lt;a class=&#34;imgshow&#34; data-fancybox=&#34;gallery&#34; href=&#34;https://storage.hahaha.net/files/blog/tech/1/img/oversold.png?imageMogr2/rquality/70&#34; data-caption=&#34;&#34; style=&#34;text-align: center;&#34;&gt;&#xA;    &#xA;        &lt;img src=&#34;https://storage.hahaha.net/files/blog/tech/1/img/oversold.png?q=80&#34; style=&#34;max-width: 100%;height: 100%;object-fit: cover;&#34; /&gt;&#xA;         &#xA;    &lt;/a&gt;&#xA;&#xA;&lt;p&gt;防止库存超卖，最先想到的可能就是「锁」，如果是一些单实例部署的库存服务，大部分情况下我们可以使用以下锁或并发工具类：&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

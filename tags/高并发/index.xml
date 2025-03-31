@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>高并发 on 好事发生</title>
-    <link>https://blog.hanyu.me/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/</link>
+    <link>https://blog.hahaha.net/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/</link>
     <description>Recent content in 高并发 on 好事发生</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 20 Oct 2024 08:00:00 +0800</lastBuildDate>
-    <atom:link href="https://blog.hanyu.me/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hahaha.net/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>漫谈高并发之指标篇</title>
-      <link>https://blog.hanyu.me/posts/tech/5/</link>
+      <link>https://blog.hahaha.net/posts/tech/5/</link>
       <pubDate>Sun, 20 Oct 2024 08:00:00 +0800</pubDate>
-      <guid>https://blog.hanyu.me/posts/tech/5/</guid>
+      <guid>https://blog.hahaha.net/posts/tech/5/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;注销了之前有505个订阅者和5篇原创技术文章的公众号，重新创建了现在的号。&lt;/p&gt;&#xA;&lt;p&gt;主要原因有两个，一是之前的名字不符合心意，今年也无法改名了，另外是想清空自己，重新开始。虽然有些不舍，但终究要和过去告别。&lt;/p&gt;&#xA;&lt;p&gt;当然，按照我的一贯风格，继续秉持不标题党、不废话、不套路的 “三不”原则。&lt;/p&gt;</description>
     </item>
   </channel>
