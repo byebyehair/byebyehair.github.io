@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Redis on 好事发生</title>
-    <link>https://blog.hahaha.net/tags/redis/</link>
+    <link>https://blog.hanyu.me/tags/redis/</link>
     <description>Recent content in Redis on 好事发生</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 23 Mar 2021 22:40:49 +0800</lastBuildDate>
-    <atom:link href="https://blog.hahaha.net/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hanyu.me/tags/redis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>分布式锁之电商防超卖的N&#43;1个坑</title>
-      <link>https://blog.hahaha.net/posts/tech/1/</link>
+      <link>https://blog.hanyu.me/posts/tech/1/</link>
       <pubDate>Tue, 23 Mar 2021 22:40:49 +0800</pubDate>
-      <guid>https://blog.hahaha.net/posts/tech/1/</guid>
-      <description>&lt;p&gt;大家好，我是Damon。&lt;br&gt;&#xA;今天和同事讨论库存防超卖问题，发现虽然只是简单的库存扣减场景，却隐藏着很多坑，一不小心就容易翻车，让我来填平这些坑。&lt;/p&gt;&#xA;&lt;h2 id=&#34;单实例环境&#34;&gt;单实例环境&lt;/h2&gt;&#xA;&lt;p&gt;一般电商体系防止库存超卖，主要有以下几种方式：&lt;/p&gt;&#xA;&lt;!--![导图](img/oversold.png)--&gt;&#xA;&#xA;&#xA;&#xA;&#xA;    &lt;a class=&#34;imgshow&#34; data-fancybox=&#34;gallery&#34; href=&#34;https://storage.hahaha.net/files/blog/tech/1/img/oversold.png?imageMogr2/rquality/70&#34; data-caption=&#34;&#34; style=&#34;text-align: center;&#34;&gt;&#xA;    &#xA;        &lt;img src=&#34;https://storage.hahaha.net/files/blog/tech/1/img/oversold.png?q=80&#34; style=&#34;max-width: 100%;height: 100%;object-fit: cover;&#34; /&gt;&#xA;         &#xA;    &lt;/a&gt;&#xA;&#xA;&lt;p&gt;防止库存超卖，最先想到的可能就是「锁」，如果是一些单实例部署的库存服务，大部分情况下我们可以使用以下锁或并发工具类：&lt;/p&gt;</description>
+      <guid>https://blog.hanyu.me/posts/tech/1/</guid>
+      <description>&lt;p&gt;大家好，我是Damon。&lt;br&gt;&#xA;今天和同事讨论库存防超卖问题，发现虽然只是简单的库存扣减场景，却隐藏着很多坑，一不小心就容易翻车，让我来填平这些坑。&lt;/p&gt;&#xA;&lt;h2 id=&#34;单实例环境&#34;&gt;单实例环境&lt;/h2&gt;&#xA;&lt;p&gt;一般电商体系防止库存超卖，主要有以下几种方式：&lt;/p&gt;&#xA;&lt;!--![导图](img/oversold.png)--&gt;&#xA;&#xA;&#xA;&#xA;&#xA;    &lt;a class=&#34;imgshow&#34; data-fancybox=&#34;gallery&#34; href=&#34;https://storage.hanyu.me/files/blog/tech/1/img/oversold.png?imageMogr2/rquality/70&#34; data-caption=&#34;&#34; style=&#34;text-align: center;&#34;&gt;&#xA;    &#xA;        &lt;img src=&#34;https://storage.hanyu.me/files/blog/tech/1/img/oversold.png?q=80&#34; style=&#34;max-width: 100%;height: 100%;object-fit: cover;&#34; /&gt;&#xA;         &#xA;    &lt;/a&gt;&#xA;&#xA;&lt;p&gt;防止库存超卖，最先想到的可能就是「锁」，如果是一些单实例部署的库存服务，大部分情况下我们可以使用以下锁或并发工具类：&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

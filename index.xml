@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>好事发生</title>
-    <link>https://blog.hahaha.net/</link>
+    <link>https://blog.hanyu.me/</link>
     <description>好事发生</description>
     
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 20 Oct 2024 08:00:00 +0800</lastBuildDate><atom:link href="https://blog.hahaha.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Oct 2024 08:00:00 +0800</lastBuildDate><atom:link href="https://blog.hanyu.me/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>漫谈高并发之指标篇</title>
-      <link>https://blog.hahaha.net/posts/tech/5/</link>
+      <link>https://blog.hanyu.me/posts/tech/5/</link>
       <pubDate>Sun, 20 Oct 2024 08:00:00 +0800</pubDate>
       
-      <guid>https://blog.hahaha.net/posts/tech/5/</guid>
+      <guid>https://blog.hanyu.me/posts/tech/5/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;注销了之前有505个订阅者和5篇原创技术文章的公众号，重新创建了现在的号。&lt;/p&gt;
 &lt;p&gt;主要原因有两个，一是之前的名字不符合心意，今年也无法改名了，另外是想清空自己，重新开始。虽然有些不舍，但终究要和过去告别。&lt;/p&gt;
@@ -24,10 +24,10 @@
     
     <item>
       <title>关于</title>
-      <link>https://blog.hahaha.net/about/</link>
+      <link>https://blog.hanyu.me/about/</link>
       <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.hahaha.net/about/</guid>
+      <guid>https://blog.hanyu.me/about/</guid>
       <description>&lt;h3 id=&#34;这里-&#34;&gt;这里 🥤&lt;/h3&gt;
 &lt;p&gt;想说的话，删了又删   &lt;br&gt;
 日出是我 日落是我&lt;br&gt;
@@ -48,10 +48,10 @@
     
     <item>
       <title>独立博客的评论趣谈</title>
-      <link>https://blog.hahaha.net/posts/life/32/</link>
+      <link>https://blog.hanyu.me/posts/life/32/</link>
       <pubDate>Mon, 22 Jul 2024 04:05:00 +0800</pubDate>
       
-      <guid>https://blog.hahaha.net/posts/life/32/</guid>
+      <guid>https://blog.hanyu.me/posts/life/32/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;注: 本篇文章中，使用了较多的成语，现学现卖，万望海涵，如有不适，请和我一起学。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;最近看到一位博主的文章 &lt;a href=&#34;https://blog.douchi.space/things-i-hate-in-blogs&#34;&gt;独立博客上我不喜欢的“功能”&lt;/a&gt; 下面的评论时，发现很多人对独立博客进行评论时需要登录或授权的情况都颇为抵触。&lt;/p&gt;
@@ -62,10 +62,10 @@
     
     <item>
       <title>要使用业务唯一ID做主键吗？</title>
-      <link>https://blog.hahaha.net/posts/tech/4/</link>
+      <link>https://blog.hanyu.me/posts/tech/4/</link>
       <pubDate>Thu, 04 Jul 2024 17:51:21 +0800</pubDate>
       
-      <guid>https://blog.hahaha.net/posts/tech/4/</guid>
+      <guid>https://blog.hanyu.me/posts/tech/4/</guid>
       <description>&lt;p&gt;注意：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;本篇文章需阅读者掌握MySQL索引基本原理，可提前阅读  &lt;a href=&#34;https://mp.weixin.qq.com/s/5UbmpnxmIV9ZDnAF9KaYdg&#34;&gt;MySQL系列 | 浅尝MySQL索引&lt;/a&gt;&lt;/li&gt;
@@ -80,10 +80,10 @@
     
     <item>
       <title>免费详解</title>
-      <link>https://blog.hahaha.net/posts/life/28/</link>
+      <link>https://blog.hanyu.me/posts/life/28/</link>
       <pubDate>Mon, 24 Jun 2024 12:18:00 +0800</pubDate>
       
-      <guid>https://blog.hahaha.net/posts/life/28/</guid>
+      <guid>https://blog.hanyu.me/posts/life/28/</guid>
       <description>&lt;p&gt;当我处于网络虚拟世界中的时间更多的时候，我会发现一些在现实生活中少见的、奇怪的、难以理解的事情，聊聊我昨天看到的一件事。&lt;/p&gt;
 &lt;p&gt;在一个网络论坛上，有人发起了一场抽奖活动，抽奖活动的规则是，66楼和88楼的回帖人，即为中奖者，奖品是两个域名，活动发起者，对中奖者拿到奖品后的使用，没有任何的限制说明。&lt;/p&gt;</description>
     </item>
@@ -92,10 +92,10 @@
     
     <item>
       <title>成为别人，而非自己</title>
-      <link>https://blog.hahaha.net/posts/life/26/</link>
+      <link>https://blog.hanyu.me/posts/life/26/</link>
       <pubDate>Mon, 05 Feb 2024 18:22:00 +0800</pubDate>
       
-      <guid>https://blog.hahaha.net/posts/life/26/</guid>
+      <guid>https://blog.hanyu.me/posts/life/26/</guid>
       <description>&lt;p&gt;我不对。&lt;/p&gt;
 &lt;p&gt;这一年，频繁的将注意力放在一些不重要的、细微的事物上。&lt;/p&gt;
 &lt;p&gt;这让我迷失，浪费了大量的时间与心力，变得缺乏目标感、缺少行动力，无论是同比，还是环比，自身不仅没有成长和进步，甚至在倒退。&lt;/p&gt;
@@ -106,10 +106,10 @@
     
     <item>
       <title>为什么小白更该使用静态博客</title>
-      <link>https://blog.hahaha.net/posts/life/27/</link>
+      <link>https://blog.hanyu.me/posts/life/27/</link>
       <pubDate>Sun, 08 Oct 2023 16:40:00 +0800</pubDate>
       
-      <guid>https://blog.hahaha.net/posts/life/27/</guid>
+      <guid>https://blog.hanyu.me/posts/life/27/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;我是很抗拒写各种折腾类、教程类的文字的。&lt;/p&gt;
 &lt;p&gt;但最近群里小伙伴的云服务器持续被探测扫描、数据库间歇性瘫痪，我想还是简单分享下我的思考。&lt;/p&gt;
@@ -120,10 +120,10 @@
     
     <item>
       <title>个站一二三</title>
-      <link>https://blog.hahaha.net/posts/life/20/</link>
+      <link>https://blog.hanyu.me/posts/life/20/</link>
       <pubDate>Sun, 10 Sep 2023 22:25:55 +0800</pubDate>
       
-      <guid>https://blog.hahaha.net/posts/life/20/</guid>
+      <guid>https://blog.hanyu.me/posts/life/20/</guid>
       <description>&lt;p&gt;在一个茅塞顿开的晚上，我坐在马桶上，突然意识到以下问题。&lt;/p&gt;
 &lt;h3 id=&#34;为什么不开评论&#34;&gt;为什么不开评论？&lt;/h3&gt;
 &lt;p&gt;1.我担心你不夸我     &lt;br&gt;
@@ -137,10 +137,10 @@
     
     <item>
       <title>奇怪的自信</title>
-      <link>https://blog.hahaha.net/posts/life/19/</link>
+      <link>https://blog.hanyu.me/posts/life/19/</link>
       <pubDate>Thu, 24 Aug 2023 20:58:50 +0800</pubDate>
       
-      <guid>https://blog.hahaha.net/posts/life/19/</guid>
+      <guid>https://blog.hanyu.me/posts/life/19/</guid>
       <description>&lt;h4 id=&#34;自信第一层&#34;&gt;自信第一层&lt;/h4&gt;
 &lt;p&gt;最近发现了一些奇怪的自信，比如此刻，楼下的主干路上传来劣质音箱和麦克发出的歌声，从《爱就一个字》唱到《江南》再到《慢慢喜欢你》，张信哲、林俊杰、莫文蔚如果听到，必然是要流泪的。&lt;/p&gt;
 &lt;p&gt;当我写下这句话的时候，我已经忘记了她具体还唱了哪些，因为着实刺耳，连耗费几万块安装的断桥铝三层隔音玻璃窗户，也无法阻挡这噪声的穿透力。我尽可能关闭耳朵，让自己别把注意力放在猜歌名上，事与愿违，最后没忍住，打开了 …&lt;/p&gt;</description>
@@ -150,10 +150,10 @@
     
     <item>
       <title>发丝的逃离</title>
-      <link>https://blog.hahaha.net/posts/life/17/</link>
+      <link>https://blog.hanyu.me/posts/life/17/</link>
       <pubDate>Tue, 20 Jun 2023 14:41:00 +0800</pubDate>
       
-      <guid>https://blog.hahaha.net/posts/life/17/</guid>
+      <guid>https://blog.hanyu.me/posts/life/17/</guid>
       <description>&lt;p&gt;我一直还算信奉一个道理，大部分期望得到的，都应该要循序渐进的。&lt;br&gt;
 财富、影响力、学识、身高体重，又或是各种XX主义互相争夺的稀缺权力，也是要循序渐进为佳，否则容易适得其反。&lt;br&gt;
 但也存在例外，例如我本应日渐后退的发际线，却像突然爆发了战争，边塞失守，残余的败兵们丢盔弃甲仓皇而逃，毫不留恋。&lt;/p&gt;</description>
@@ -163,10 +163,10 @@
     
     <item>
       <title>高并发短链系统设计</title>
-      <link>https://blog.hahaha.net/posts/tech/3/</link>
+      <link>https://blog.hanyu.me/posts/tech/3/</link>
       <pubDate>Thu, 04 May 2023 10:01:22 +0800</pubDate>
       
-      <guid>https://blog.hahaha.net/posts/tech/3/</guid>
+      <guid>https://blog.hanyu.me/posts/tech/3/</guid>
       <description>&lt;p&gt;&lt;strong&gt;原则与底线：不说废话、不凑字数、不标题党。&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;h3 id=&#34;什么是短链&#34;&gt;什么是短链&lt;/h3&gt;
@@ -179,10 +179,10 @@
     
     <item>
       <title>大厂面试复盘</title>
-      <link>https://blog.hahaha.net/posts/growing/1/</link>
+      <link>https://blog.hanyu.me/posts/growing/1/</link>
       <pubDate>Fri, 25 Feb 2022 00:19:49 +0800</pubDate>
       
-      <guid>https://blog.hahaha.net/posts/growing/1/</guid>
+      <guid>https://blog.hanyu.me/posts/growing/1/</guid>
       <description>&lt;p&gt;面试题：
 &lt;a href=&#34;https://docs.qq.com/sheet/DUFF5UXRHa0NkQ0Fu&#34; target=&#34;_balnk&#34;&gt;2021年末面试题&lt;/a&gt;(一些不好言说的原因，需要申请权限)&lt;/p&gt;
 &lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
@@ -193,10 +193,10 @@
     
     <item>
       <title>浅尝MySQL索引</title>
-      <link>https://blog.hahaha.net/posts/tech/2/</link>
+      <link>https://blog.hanyu.me/posts/tech/2/</link>
       <pubDate>Wed, 09 Feb 2022 17:28:32 +0800</pubDate>
       
-      <guid>https://blog.hahaha.net/posts/tech/2/</guid>
+      <guid>https://blog.hanyu.me/posts/tech/2/</guid>
       <description>&lt;h2 id=&#34;写在前面的废话&#34;&gt;写在前面的废话&lt;/h2&gt;
 &lt;p&gt;Hello，大家好，我是Damon，一年前我写了一篇文章，然后拖更至今。
 这其中有自己懒惰、工作变动等因素，年前这段时间一直在求职面试，拿到了些一线大厂和一些独角兽的offer。这段时间面试的经验和学习的过程对我自己帮助很大，面经还在整理中，后续会发出来给大家做一个参考吧。&lt;br&gt;
@@ -207,10 +207,10 @@
     
     <item>
       <title>分布式锁之电商防超卖的N&#43;1个坑</title>
-      <link>https://blog.hahaha.net/posts/tech/1/</link>
+      <link>https://blog.hanyu.me/posts/tech/1/</link>
       <pubDate>Tue, 23 Mar 2021 22:40:49 +0800</pubDate>
       
-      <guid>https://blog.hahaha.net/posts/tech/1/</guid>
+      <guid>https://blog.hanyu.me/posts/tech/1/</guid>
       <description>&lt;p&gt;大家好，我是Damon。&lt;br&gt;
 今天和同事讨论库存防超卖问题，发现虽然只是简单的库存扣减场景，却隐藏着很多坑，一不小心就容易翻车，让我来填平这些坑。&lt;/p&gt;
 &lt;h2 id=&#34;单实例环境&#34;&gt;单实例环境&lt;/h2&gt;
@@ -220,9 +220,9 @@
 
 
 
-    &lt;a class=&#34;imgshow&#34; data-fancybox=&#34;gallery&#34; href=&#34;https://storage.hahaha.net/files/blog/tech/1/img/oversold.png?imageMogr2/rquality/70&#34; data-caption=&#34;&#34; style=&#34;text-align: center;&#34;&gt;
+    &lt;a class=&#34;imgshow&#34; data-fancybox=&#34;gallery&#34; href=&#34;https://storage.hanyu.me/files/blog/tech/1/img/oversold.png?imageMogr2/rquality/70&#34; data-caption=&#34;&#34; style=&#34;text-align: center;&#34;&gt;
     
-        &lt;img src=&#34;https://storage.hahaha.net/files/blog/tech/1/img/oversold.png?q=80&#34; style=&#34;max-width: 100%;height: 100%;object-fit: cover;&#34; /&gt;
+        &lt;img src=&#34;https://storage.hanyu.me/files/blog/tech/1/img/oversold.png?q=80&#34; style=&#34;max-width: 100%;height: 100%;object-fit: cover;&#34; /&gt;
          
     &lt;/a&gt;
 

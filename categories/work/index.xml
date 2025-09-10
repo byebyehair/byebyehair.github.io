@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Work on 好事发生</title>
-    <link>https://blog.hahaha.net/categories/work/</link>
+    <link>https://blog.hanyu.me/categories/work/</link>
     <description>Recent content in Work on 好事发生</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 25 Feb 2022 00:19:49 +0800</lastBuildDate>
-    <atom:link href="https://blog.hahaha.net/categories/work/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hanyu.me/categories/work/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>大厂面试复盘</title>
-      <link>https://blog.hahaha.net/posts/growing/1/</link>
+      <link>https://blog.hanyu.me/posts/growing/1/</link>
       <pubDate>Fri, 25 Feb 2022 00:19:49 +0800</pubDate>
-      <guid>https://blog.hahaha.net/posts/growing/1/</guid>
+      <guid>https://blog.hanyu.me/posts/growing/1/</guid>
       <description>&lt;p&gt;面试题：&#xA;&lt;a href=&#34;https://docs.qq.com/sheet/DUFF5UXRHa0NkQ0Fu&#34; target=&#34;_balnk&#34;&gt;2021年末面试题&lt;/a&gt;(一些不好言说的原因，需要申请权限)&lt;/p&gt;&#xA;&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;&#xA;&lt;p&gt;哈喽，我是Damon，现在是2022了，年前11月上旬到12月上旬一直在面试，年后很多很多人催着我出面经，现在我一说话就问我“面经好了没，我等着去面试” 🤣🤣🤣，所以赶了几个周末，一个字一个字的纯手敲总结，&lt;strong&gt;面试题、简历模板、薪酬对比模板在下面&lt;/strong&gt;。&lt;/p&gt;</description>
     </item>
   </channel>

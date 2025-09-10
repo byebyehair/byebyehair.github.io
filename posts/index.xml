@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>posts on 好事发生</title>
-    <link>https://blog.hahaha.net/posts/</link>
+    <link>https://blog.hanyu.me/posts/</link>
     <description>Recent content in posts on 好事发生</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://blog.hahaha.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.hanyu.me/posts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
